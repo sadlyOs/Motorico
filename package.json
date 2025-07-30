@@ -1,0 +1,16 @@
+{
+  "name": "motorico",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.sass ./src/css/output.css",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "vite": "^7.0.4"
+  }
+}
