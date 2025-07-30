@@ -333,17 +333,26 @@ a {
   display: flex;
   align-items: center;
   font-family: "Inter";
-  gap: 17px;
+}
+.header__burger-container, .header__phone-menu {
+  display: none;
 }
 .header__logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 1 0 auto;
   padding-right: 50px;
   font-size: 1.5rem;
 }
+.header__adapt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .header__links {
-  flex: 1 1 100px;
+  flex: 1 0 auto;
 }
 .header__lang {
   position: relative;
@@ -372,7 +381,7 @@ a {
   gap: 10px;
   font-size: clamp(0.9rem, 0.2502rem + 1.048vw, 1.2rem);
   padding: 12px 18px;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 15px;
   transition: all 0.3s;
 }
@@ -391,17 +400,67 @@ a {
 .header__button:hover svg path {
   stroke: #FFFFFF;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (hover: none) {
+  .header {
+    gap: 10px;
+  }
   .header__logo {
     padding-right: 0;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 992px) and (hover: none) {
   .header {
     justify-content: space-between;
   }
-  .header__links, .header__element {
+  .header__adapt, .header__phone-menu {
     display: none;
+  }
+  .header__burger-container {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .header__burger-container > span, .header__burger-container > span:before, .header__burger-container > span:after {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #000000;
+  }
+  .header__burger-container > span:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+  }
+  .header__burger-container > span:after {
+    content: "";
+    top: 10px;
+    left: 0;
+    position: absolute;
+  }
+  .header__phone-menu {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    background: #000000;
+  }
+  .header__links {
+    flex: none;
+    margin-bottom: 30px;
+  }
+  .header__button {
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  .header__button svg path {
+    stroke: #FFFFFF;
   }
 }
 
@@ -432,9 +491,24 @@ a {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (hover: none) {
   .menu__list {
     gap: 5px;
+  }
+}
+@media (max-width: 992px) and (hover: none) {
+  .menu__list {
+    flex-direction: column;
+  }
+  .menu__item > a {
+    color: white;
+    font-size: 1.4rem;
+  }
+  .menu__item > a:hover {
+    color: #FFFFFF;
+  }
+  .menu__item > a:hover::after {
+    display: none;
   }
 }
 

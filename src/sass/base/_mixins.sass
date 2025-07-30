@@ -2,5 +2,5 @@
 
 @mixin respond($breakpoint)
     $size: map-get(variables.$breakpoints, $breakpoint)
-    @media (max-width: $size)
+    @media (max-width: $size) and (hover: none)
         @content

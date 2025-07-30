@@ -7,17 +7,28 @@
   display: flex
   align-items: center
   font-family: 'Inter'
-  gap: 17px
+  // gap: 17px
+
+  &__burger-container, &__phone-menu
+    display: none
+  
 
   &__logo
     display: flex
     align-items: center
     gap: 10px
+    flex: 1 0 auto
     padding-right: 50px
     font-size: 1.5rem
 
+  &__adapt
+    width: 100%
+    display: flex
+    align-items: center
+    gap: 10px
+
   &__links
-    flex: 1 1 100px
+    flex: 1 0 auto
 
   &__lang
     position: relative
@@ -46,7 +57,7 @@
     gap: 10px
     font-size: clamp(0.9rem, 0.2502rem + 1.048vw, 1.2rem);
     padding: 12px 18px
-    border: 2px solid black
+    border: 2px solid v.$black
     border-radius: 15px
     transition: all .3s
 
@@ -67,13 +78,60 @@
     stroke: v.$white
   
   +mixins.respond("xl")
+    gap: 10px
     &__logo
       padding-right: 0
 
   +mixins.respond("lg")
     justify-content: space-between
-    &__links, &__element
+    &__adapt, &__phone-menu
       display: none
+    &__burger-container 
+      display: block
+      position: relative
+      z-index: 100
+    &__burger-container > span, &__burger-container > span:before, &__burger-container > span:after
+      display: block
+      width: 40px
+      height: 5px
+      background: v.$black
+
+    &__burger-container > span:before
+      content: ''
+      position: absolute
+      top: -10px
+      left: 0
+
+    &__burger-container > span:after
+      content: ''
+      top: 10px
+      left: 0
+      position: absolute
+
+    &__phone-menu
+      height: 100vh
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      gap: 10px
+      z-index: 10
+      background: v.$black
+      // opacity: 0.5
+
+    &__links
+      flex: none
+      margin-bottom: 30px
+
+    &__button
+      border: 2px solid v.$white
+      color: v.$white
+
+    &__button svg path
+      stroke: v.$white
 
 .menu
   &__list
@@ -106,4 +164,16 @@
   +mixins.respond("xl")
     &__list
       gap: 5px
+
+  +mixins.respond("lg")
+    &__list
+      flex-direction: column
+    &__item > a
+      color: white
+      font-size: 1.4rem
+    &__item > a:hover
+      color: v.$white
+    &__item > a:hover::after
+      display: none
+      
     
