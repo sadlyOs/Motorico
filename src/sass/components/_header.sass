@@ -90,23 +90,53 @@
       display: block
       position: relative
       z-index: 100
-    &__burger-container > span, &__burger-container > span:before, &__burger-container > span:after
+      
+    &__burger-container > span
       display: block
       width: 40px
       height: 5px
       background: v.$black
+      animation: burgerBlack .7s
+      transition: all .3s
 
-    &__burger-container > span:before
+    &__burger-container > span:first-child
       content: ''
       position: absolute
       top: -10px
       left: 0
 
-    &__burger-container > span:after
+    &__burger-container > span:last-child
       content: ''
       top: 10px
       left: 0
       position: absolute
+
+    &__burger-container.white > span
+      animation: burgerWhite .7s
+      background: v.$white
+
+    &__burger-container.white > span:first-child
+      top: 0
+      transform: rotate(40deg)
+    
+    &__burger-container.white > span:last-child
+      top: 0
+      transform: rotate(-40deg)
+
+    &__burger-container.white > span:nth-child(2)
+      transform: rotate(40deg)
+
+    @keyframes burgerWhite
+      0% 
+        background: v.$black
+      100%
+        background: v.$white
+
+    @keyframes burgerBlack
+        0% 
+          background: v.$white
+        100%
+          background: v.$black
 
     &__phone-menu
       height: 100vh
@@ -114,13 +144,41 @@
       left: 0
       top: 0
       width: 100%
+      visibility: visible
+      display: flex
       flex-direction: column
       align-items: center
       justify-content: center
       gap: 10px
       z-index: 10
       background: v.$black
-      // opacity: 0.5
+      opacity: 0.5
+      animation: phone-menu .3s 
+
+    &__phone-menu.hide
+      visibility: hidden
+      opacity: 0
+      animation: phone-menu-hide .3s
+
+      @keyframes phone-menu 
+          0%
+            transform: translateX(-100px)
+            opacity: 0
+            visibility: hidden
+          100%
+            transform: translateX(0)
+            visibility: visible
+            opacity: 0.5
+
+      @keyframes phone-menu-hide
+        0%
+          transform: translateX(0)
+          visibility: visible
+          opacity: 0.5
+        100%
+          transform: translateX(-100px)
+          opacity: 0
+          visibility: hidden
 
     &__links
       flex: none

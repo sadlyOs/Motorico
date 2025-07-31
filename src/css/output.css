@@ -420,23 +420,56 @@ a {
     position: relative;
     z-index: 100;
   }
-  .header__burger-container > span, .header__burger-container > span:before, .header__burger-container > span:after {
+  .header__burger-container > span {
     display: block;
     width: 40px;
     height: 5px;
     background: #000000;
+    animation: burgerBlack 0.7s;
+    transition: all 0.3s;
   }
-  .header__burger-container > span:before {
+  .header__burger-container > span:first-child {
     content: "";
     position: absolute;
     top: -10px;
     left: 0;
   }
-  .header__burger-container > span:after {
+  .header__burger-container > span:last-child {
     content: "";
     top: 10px;
     left: 0;
     position: absolute;
+  }
+  .header__burger-container.white > span {
+    animation: burgerWhite 0.7s;
+    background: #FFFFFF;
+  }
+  .header__burger-container.white > span:first-child {
+    top: 0;
+    transform: rotate(40deg);
+  }
+  .header__burger-container.white > span:last-child {
+    top: 0;
+    transform: rotate(-40deg);
+  }
+  .header__burger-container.white > span:nth-child(2) {
+    transform: rotate(40deg);
+  }
+  @keyframes burgerWhite {
+    0% {
+      background: #000000;
+    }
+    100% {
+      background: #FFFFFF;
+    }
+  }
+  @keyframes burgerBlack {
+    0% {
+      background: #FFFFFF;
+    }
+    100% {
+      background: #000000;
+    }
   }
   .header__phone-menu {
     height: 100vh;
@@ -444,12 +477,45 @@ a {
     left: 0;
     top: 0;
     width: 100%;
+    visibility: visible;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
     z-index: 10;
     background: #000000;
+    opacity: 0.5;
+    animation: phone-menu 0.3s;
+  }
+  .header__phone-menu.hide {
+    visibility: hidden;
+    opacity: 0;
+    animation: phone-menu-hide 0.3s;
+  }
+  @keyframes phone-menu {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 0.5;
+    }
+  }
+  @keyframes phone-menu-hide {
+    0% {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(-100px);
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   .header__links {
     flex: none;
