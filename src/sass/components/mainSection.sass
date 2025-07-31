@@ -1,0 +1,21 @@
+@use "../base/color" as v
+@use '../base/_variables.sass'
+
+.main-section
+    height: 100vh
+    background: url('../assets/images/mainBackground.png') no-repeat center/cover
+    position: relative
+
+    &__text
+        // position: absolute
+        color: v.$white
+        padding-top: 500px
+
+    &__text > h1
+        font-size: clamp(2.5rem, 2.1rem + 2vw, 4rem);
+        margin-bottom: 40px
+    &__text > p
+        font-size: 1.4rem
+        margin-bottom: 40px 
+
+    // +mixins.respond("lg")

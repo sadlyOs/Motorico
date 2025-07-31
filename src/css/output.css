@@ -326,13 +326,14 @@ a {
 }
 .container {
   max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
-  padding: 15px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
-  font-family: "Inter";
 }
 .header__burger-container, .header__phone-menu {
   display: none;
@@ -576,6 +577,43 @@ a {
   .menu__item > a:hover::after {
     display: none;
   }
+}
+
+.main-section {
+  height: 100vh;
+  background: url("../assets/images/mainBackground.png") no-repeat center/cover;
+  position: relative;
+}
+.main-section__text {
+  color: #FFFFFF;
+  padding-top: 500px;
+}
+.main-section__text > h1 {
+  font-size: clamp(2.5rem, 2.1rem + 2vw, 4rem);
+  margin-bottom: 40px;
+}
+.main-section__text > p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.link-button {
+  color: #FFFFFF;
+  padding: 12px 20px;
+  background: #FF5733;
+  transition: background 0.3s;
+}
+
+.link-button:hover {
+  background: #000000;
+}
+
+body {
+  font-family: "Inter";
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=output.css.map */
