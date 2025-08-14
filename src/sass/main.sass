@@ -5,6 +5,7 @@
 @use "./components/mainSection"
 @use "./base/_linkButton"
 @use "./components/sections/_section.sass"
+@use "./components/_form"
 
 body
     font-family: 'Inter'
@@ -15,3 +16,12 @@ h1,h2,h3,h4,h5,h6,p
 h2
     font-size: clamp(2rem, 1.5932rem + 2.0339vw, 3.5rem);
     font-weight: bold
+
+input[type="date"]
+    appearance: none
+    width: 100%
+
+select
+    appearance: none
+    width: 100%
+    box-sizing: border-box

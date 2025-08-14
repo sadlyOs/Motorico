@@ -659,6 +659,126 @@ a {
   }
 }
 
+.form {
+  background: #F0F1F5;
+  margin-top: 96px;
+  padding: 96px 0;
+  position: relative;
+}
+.form label {
+  display: block;
+  font-size: 1.1rem;
+  color: #565E6C;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.form__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.form__left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+.form__background {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  z-index: 1;
+}
+.form__header ul, .form__header span {
+  color: #565E6C;
+  line-height: 1.5;
+}
+.form__header > ul {
+  flex-grow: 2;
+  margin-top: 24px;
+  padding-left: 30px;
+  list-style-type: disc;
+}
+.form__img {
+  margin-top: 96px;
+}
+.form__right {
+  flex: 1;
+  padding: 48px;
+  background: #FFFFFF;
+}
+.form__header-item {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  margin-bottom: 10px;
+}
+.form__col {
+  margin-bottom: 32px;
+}
+.form__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.form__input {
+  flex-grow: 1;
+}
+.form__input > input {
+  width: 100%;
+  padding: 16px 16px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background: #F0F1F5;
+}
+.form__input > select {
+  width: 100%;
+  padding: 16px 16px;
+  background: #F0F1F5;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.form__inputs--date {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form__date {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.form__submit > button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 0;
+}
+@media screen and (max-width: 1718px) {
+  .form__background {
+    display: none;
+  }
+}
+@media (max-width: 1200px) and (hover: none) {
+  .form__left {
+    justify-content: start;
+  }
+}
+@media (max-width: 992px) and (hover: none) {
+  .form__img img {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) and (hover: none) {
+  .form__img img {
+    width: 50%;
+  }
+}
+
 body {
   font-family: "Inter";
 }
@@ -670,6 +790,17 @@ h1, h2, h3, h4, h5, h6, p {
 h2 {
   font-size: clamp(2rem, 1.5932rem + 2.0339vw, 3.5rem);
   font-weight: bold;
+}
+
+input[type=date] {
+  appearance: none;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=output.css.map */

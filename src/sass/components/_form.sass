@@ -1,0 +1,125 @@
+@use "../base/_color" as v
+@use "../base/_variables"
+@use "../base/_mixins" as mixins
+
+.form
+    background: v.$lightGray
+    margin-top: 96px
+    padding: 96px 0
+    position: relative
+
+    label
+        display: block
+        font-size: 1.1rem
+        color: v.$gray
+        margin-bottom: 8px
+        font-weight: bold
+
+    &__container
+        display: flex
+        justify-content: space-between
+        gap: 10px
+        flex-wrap: wrap
+
+    &__left
+        display: flex
+        flex-direction: column
+        flex: 1
+        justify-content: space-between
+
+    &__background
+        position: absolute
+        top: 50px
+        left: 5px
+        z-index: 1
+
+    &__header ul, &__header span
+        color: v.$gray
+        line-height: 1.5
+
+    &__header > ul
+        flex-grow: 2
+        margin-top: 24px
+        padding-left: 30px
+        list-style-type: disc
+        
+    &__img
+        margin-top: 96px
+
+    &__right
+        flex: 1
+        padding: 48px
+        background: v.$white
+    
+    &__header-item
+        font-size: 1.4rem
+        font-weight: bold
+        line-height: 2rem
+        margin-bottom: 10px
+    
+    &__col
+        margin-bottom: 32px
+
+    &__inputs
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 20px
+    
+    &__input
+        flex-grow: 1
+    
+    &__input > input
+        width: 100%
+        padding: 16px 16px
+        box-sizing: border-box
+        border: none
+        border-radius: 5px
+        background: v.$lightGray
+
+    &__input > select
+        width: 100%
+        padding: 16px 16px
+        background: v.$lightGray
+        outline: none
+        border: none
+        border-radius: 5px
+
+
+    &__inputs--date
+        display: flex
+        flex-direction: column
+        gap: 16px
+    
+    &__date
+        display: flex
+        flex-wrap: wrap
+        gap: 16px
+
+    &__submit > button
+        width: 100%
+        border: none
+        border-radius: 5px
+        padding: 16px 0
+
+    @media screen and (max-width: 1718px)
+        &__background
+            display: none
+
+    +mixins.respond("xl")
+        &__left
+                justify-content: start
+
+    +mixins.respond("lg")
+        &__img img
+            width: 90%
+
+    +mixins.respond('sm')
+        &__img img
+            width: 50%
+        
+        // &__date
+        //     flex-direction: column
+
+        
+    
