@@ -779,6 +779,107 @@ a {
   }
 }
 
+.footer {
+  padding-top: 96px;
+  padding-bottom: 31px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.footer__col--logo {
+  display: flex;
+  gap: 14px;
+  font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem);
+}
+.footer__col--subscribe {
+  text-align: center;
+}
+.footer__col--subscribe > h4 {
+  font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem);
+  margin-bottom: 5px;
+}
+.footer__col--subscribe > input:nth-of-type(1) {
+  border: none;
+  padding: 10px 14px;
+  background: #F0F1F5;
+  position: relative;
+}
+.footer__col--subscribe > input:nth-of-type(1)::before {
+  content: "sadas";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: #000000;
+}
+.footer__btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.footer__col--lists {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__list > span {
+  display: block;
+  font-weight: bold;
+  font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem);
+  margin-bottom: 12px;
+}
+.footer__list li {
+  font-size: clamp(0.9rem, 0.8733rem + 0.1333vw, 1rem);
+}
+.footer__list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.footer__col--other {
+  display: flex;
+  justify-content: center;
+}
+.footer__links {
+  display: flex;
+}
+.footer__links > ul {
+  display: flex;
+  list-style-type: disc;
+  padding-left: 30px;
+}
+.footer__links li {
+  padding-right: 30px;
+}
+@media (max-width: 768px) and (hover: none) {
+  .footer__col--lists {
+    gap: 50px;
+  }
+}
+@media (max-width: 576px) and (hover: none) {
+  .footer__btn {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .footer__col--lists {
+    gap: 20px;
+  }
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__links > ul {
+    margin-top: 5px;
+  }
+}
+
 body {
   font-family: "Inter";
 }
