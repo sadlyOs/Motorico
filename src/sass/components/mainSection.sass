@@ -1,5 +1,6 @@
 @use "../base/color" as v
 @use '../base/_variables.sass'
+@use '../base/mixins' as mixins
 
 .main-section
     height: 100vh
@@ -18,4 +19,7 @@
         font-size: 1.4rem
         margin-bottom: 40px 
 
-    // +mixins.respond("lg")
+    +mixins.respond("sm")
+        &__text
+            padding-top: 300px
+            text-align: center
