@@ -5,7 +5,7 @@
 .footer
     padding-top: 96px
     padding-bottom: 31px
-    
+
     &__content
         display: flex
         flex-direction: column
@@ -23,7 +23,7 @@
     &__col--subscribe > h4
         font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem);
         margin-bottom: 5px
-    
+
     &__col--subscribe > input:nth-of-type(1)
         border: none
         padding: 10px 14px
@@ -49,7 +49,7 @@
     &__col--lists
         display: flex
         gap: 100px
-        flex-wrap: wrap 
+        flex-wrap: wrap
         justify-content: center
 
     &__list > span
@@ -58,7 +58,7 @@
         font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem);
         margin-bottom: 12px
         // justify-content: center
-    
+
     &__list li
         font-size: clamp(0.9rem, 0.8733rem + 0.1333vw, 1rem);
 
@@ -68,7 +68,7 @@
     &__col--other
         display: flex
         justify-content: center
-    
+
     &__links
         display: flex
 
@@ -79,6 +79,12 @@
 
     &__links li
         padding-right: 30px
+
+    &__links a, &__list a
+        transition: color .3s
+
+    &__links a:hover, &__list a:hover
+        color: v.$orange
 
     +mixins.respond("md")
         &__col--lists
@@ -93,11 +99,10 @@
 
         &__col--lists
             gap: 20px
-        
+
         &__links
             flex-direction: column
             align-items: center
-        
+
         &__links > ul
             margin-top: 5px
-    

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <script type="module" src="../../src/js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+        <div class="header__img">
+            <img src="../../public/icons/Image.svg" alt="icon" />
+        </div>
+        <div class="header__text">
+            <p>Prosthesis Connect</p>
+        </div>
+        </div>
+        <div class="header__adapt">
+        <div class="header__links">
+            <nav class="header__nav menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="../../index.html">Home</a></li>
+                <li class="menu__item"><a href="./products.html">Products</a></li>
+                <li class="menu__item"><a href="">FAQ</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="header__lang">
+            <select class="header__select">
+            Lang
+            <option value="English">English</option>
+            <option value="Russian">Russian</option>
+            </select>
+            <img src="../../public/icons/Arrow.svg" alt="arrow" />
+        </div>
+        <div class="header__element">
+            <a href="#" class="header__button">
+            <div class="header__button-img">
+                <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.92492 7.58008C4.31524 7.58008 2.88739 7.94374 1.94917 8.26009C1.25662 8.49436 0.794922 9.14701 0.794922 9.87832L0.794922 12.1401L5.92492 12.1401"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path
+                    d="M5.92983 7.55997C4.35606 7.55997 3.07983 5.71374 3.07983 4.13997L3.07983 3.56997C3.07983 1.9962 4.35606 0.719971 5.92983 0.719971C7.5036 0.719971 8.77983 1.9962 8.77983 3.56997V4.13997C8.77983 5.71374 7.5036 7.55997 5.92983 7.55997Z"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                </svg>
+                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.72144 2.85502C1.97452 1.87177 2.86714 1.14502 3.92962 1.14502C4.77322 1.14502 5.50966 1.6033 5.9041 2.28445"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path d="M6.90947 0.947266L6.66437 3.43247L4.23047 2.89667L6.90947 0.947266Z" fill="#171A1F" />
+                <path
+                    d="M6.14409 4.57495C5.89101 5.5582 4.99839 6.28495 3.93591 6.28495C3.09231 6.28495 2.35587 5.82667 1.96143 5.14552"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path d="M0.950439 6.48251L1.19554 3.99731L3.62944 4.53311L0.950439 6.48251Z" fill="#171A1F" />
+                </svg>
+            </div>
+            <span>Leave a Request</span>
+            </a>
+        </div>
+        <div class="header__element">
+            <a href="#" class="header__button">
+            <div class="header__button-img">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.83839 7.32861C5.76885 7.97328 5.46732 9.41652 4.15005 9.85542C2.44005 10.4254 1.30005 11.0667 1.30005 13.2754L12.7 13.2754C12.7 11.0667 11.56 10.4254 9.85005 9.85542C8.53221 9.41595 8.23125 7.97328 8.16171 7.32861"
+                    stroke="black" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path
+                    d="M7.00015 7.55997C5.42638 7.55997 4.15015 6.28374 4.15015 4.70997V3.56997C4.15015 1.9962 5.42638 0.719971 7.00015 0.719971C8.57392 0.719971 9.85015 1.9962 9.85015 3.56997V4.70997C9.85015 6.28374 8.57392 7.55997 7.00015 7.55997Z"
+                    stroke="black" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                </svg>
+                <span>Contact Us</span>
+            </div>
+            </a>
+        </div>
+        </div>
+        <div class="header__burger-container" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="header__phone-menu hide cancel" id="phoneMenu">
+        <div class="header__links">
+            <nav class="header__nav menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">Products</a></li>
+                <li class="menu__item"><a href="#">FAQ</a></li>
+            </ul>
+            </nav>
+        </div>
+
+        <!-- <div class="header__lang">
+            <select class="header__select">
+            Lang
+            <option value="English">English</option>
+            <option value="Russian">Russian</option>
+            </select>
+            <img src="./public/icons/Arrow.svg" alt="arrow" />
+        </div> -->
+        <div class="header__element">
+            <a href="#" class="header__button">
+            <div class="header__button-img">
+                <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.92492 7.58008C4.31524 7.58008 2.88739 7.94374 1.94917 8.26009C1.25662 8.49436 0.794922 9.14701 0.794922 9.87832L0.794922 12.1401L5.92492 12.1401"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path
+                    d="M5.92983 7.55997C4.35606 7.55997 3.07983 5.71374 3.07983 4.13997L3.07983 3.56997C3.07983 1.9962 4.35606 0.719971 5.92983 0.719971C7.5036 0.719971 8.77983 1.9962 8.77983 3.56997V4.13997C8.77983 5.71374 7.5036 7.55997 5.92983 7.55997Z"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                </svg>
+                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.72144 2.85502C1.97452 1.87177 2.86714 1.14502 3.92962 1.14502C4.77322 1.14502 5.50966 1.6033 5.9041 2.28445"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path d="M6.90947 0.947266L6.66437 3.43247L4.23047 2.89667L6.90947 0.947266Z" fill="#171A1F" />
+                <path
+                    d="M6.14409 4.57495C5.89101 5.5582 4.99839 6.28495 3.93591 6.28495C3.09231 6.28495 2.35587 5.82667 1.96143 5.14552"
+                    stroke="#171A1F" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path d="M0.950439 6.48251L1.19554 3.99731L3.62944 4.53311L0.950439 6.48251Z" fill="#171A1F" />
+                </svg>
+            </div>
+            <span>Leave a Request</span>
+            </a>
+        </div>
+        <div class="header__element">
+            <a href="#" class="header__button">
+            <div class="header__button-img">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.83839 7.32861C5.76885 7.97328 5.46732 9.41652 4.15005 9.85542C2.44005 10.4254 1.30005 11.0667 1.30005 13.2754L12.7 13.2754C12.7 11.0667 11.56 10.4254 9.85005 9.85542C8.53221 9.41595 8.23125 7.97328 8.16171 7.32861"
+                    stroke="black" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                <path
+                    d="M7.00015 7.55997C5.42638 7.55997 4.15015 6.28374 4.15015 4.70997V3.56997C4.15015 1.9962 5.42638 0.719971 7.00015 0.719971C8.57392 0.719971 9.85015 1.9962 9.85015 3.56997V4.70997C9.85015 6.28374 8.57392 7.55997 7.00015 7.55997Z"
+                    stroke="black" stroke-width="1.368" stroke-miterlimit="10" stroke-linecap="round" />
+                </svg>
+                <span>Contact Us</span>
+            </div>
+            </a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="products__container container">
+                <h1 class="products__title">Product Catalog</h1>
+                <div class="products__list">
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20.png" alt="Product 1" />
+                        <h3>Arm Prosthesis</h3>
+                        <p>Lightweight design with advanced grip control. Perfect for daily activities and sports.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20-2.png" alt="Product 2" />
+                        <h3>Leg Prosthesis</h3>
+                        <p>Enhanced mobility with ergonomic support. Ideal for walking and running.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20-3.png" alt="Product 3" />
+                        <h3>Hand Prosthesis</h3>
+                        <p>Multi-functional grip for versatile tasks. Compact and lightweight design.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20.png" alt="Product 1" />
+                        <h3>Arm Prosthesis</h3>
+                        <p>Lightweight design with advanced grip control. Perfect for daily activities and sports.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20-2.png" alt="Product 2" />
+                        <h3>Leg Prosthesis</h3>
+                        <p>Enhanced mobility with ergonomic support. Ideal for walking and running.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                    <div class="products__item">
+                        <img src="../../src/assets/images/products/Image 20-3.png" alt="Product 3" />
+                        <h3>Hand Prosthesis</h3>
+                        <p>Multi-functional grip for versatile tasks. Compact and lightweight design.</p>
+                        <a href="#" class="products__btn second__button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+        <div class="footer__col footer__col--logo">
+            <img src="../../src/assets/icons/logo2.svg" alt="logo">
+            <h3>Prosthesis Connect</h3>
+        </div>
+        <div class="footer__col footer__col--subscribe">
+            <h4>Subscribe to our newsletter</h4>
+            <input type="email" placeholder="Enter your email" />
+            <button class="link-button footer__btn">Subscribe</button>
+        </div>
+        <div class="footer__col footer__col--lists">
+            <div class="footer__list">
+            <span>Product</span>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            </div>
+
+            <div class="footer__list">
+            <span>Resources</span>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">User guides</a></li>
+                <li><a href="#">Webinars</a></li>
+            </ul>
+            </div>
+
+            <div class="footer__list">
+            <span>Company</span>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            </div>
+            <div class="footer__list">
+            <span>Plans & Pricing</span>
+            <ul>
+                <li><a href="#">Personal</a></li>
+                <li><a href="#">Start up</a></li>
+                <li><a href="#">Organization</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer__col footer__col--other">
+            <div class="footer__links">
+            <p>© 2024 Brand, Inc.</p>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+            </div>
+            <!-- <div class="footer__social">
+            <a href="#"><img src="./src/icons/twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="./src/icons/facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="./src/icons/linkedin.svg" alt="linkedin"></a>
+            <a href="#"><img src="./src/icons/youtube.svg" alt="youtube"></a>
+            </div> -->
+        </div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
