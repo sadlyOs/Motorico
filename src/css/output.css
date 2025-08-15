@@ -941,12 +941,89 @@ template {
   }
 }
 
+.faq {
+  padding: 96px 0;
+}
+.faq__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq__title {
+  font-size: clamp(1.5rem, 1.5932rem + 2.0339vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.faq__desc {
+  font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
+  text-align: center;
+  color: #9095A0;
+  margin-bottom: 96px;
+}
+.faq__content {
+  display: flex;
+  flex-direction: column;
+}
+.faq__item {
+  position: relative;
+  padding: 31px 0;
+  border-top: 1px solid #9095A0;
+}
+.faq__item > h3 {
+  font-size: clamp(1.2rem, 0.92rem + 0.4vw, 1rem);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.faq__item > p {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  color: #9095A0;
+  transition: opacity 0.5s, max-height 0.2s;
+}
+.faq__arrow {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 14px 14px;
+  transition: all 0.3s;
+}
+.faq__arrow > img {
+  transition: transform 0.3s;
+}
+.faq__active p {
+  max-height: 500px;
+  opacity: 1;
+}
+.faq__active .faq__arrow > img {
+  transition-origin: center;
+  transform: rotate(180deg);
+}
+.faq__item {
+  cursor: pointer;
+  padding-right: 150px;
+  box-sizing: border-box;
+}
+.faq__item:hover .faq__arrow {
+  background: #F0F1F5;
+  border-radius: 10px;
+}
+@media (max-width: 992px) and (hover: none) {
+  .faq__item {
+    padding: 31px 0;
+    border-top: 1px solid #9095A0;
+  }
+}
+
 body {
   font-family: "Inter";
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
 }
 
 h2 {

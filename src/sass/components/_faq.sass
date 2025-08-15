@@ -1,0 +1,78 @@
+@use "../base/_color" as v
+@use '../base/_variables'
+@use '../base/_mixins' as mixins
+
+.faq
+    padding: 96px 0
+
+    &__header
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__title
+        font-size: clamp(1.5rem, 1.5932rem + 2.0339vw, 3.5rem)
+        text-align: center
+        margin-bottom: 30px
+
+    &__desc
+        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
+        text-align: center
+        color: v.$gray
+        margin-bottom: 96px
+
+    &__content
+        display: flex
+        flex-direction: column
+
+    &__item
+        position: relative
+        padding: 31px 0
+        border-top: 1px solid v.$gray
+
+    &__item > h3
+        font-size: clamp(1.2rem, 0.92rem + 0.4vw, 1rem)
+        font-weight: bold
+        margin-bottom: 10px
+
+    &__item > p
+        display: block
+        max-height: 0
+        opacity: 0
+        line-height: 1.5
+        overflow: hidden
+        color: v.$gray
+        transition: opacity 0.5s, max-height 0.2s
+
+
+    &__arrow
+        position: absolute
+        top: 10px
+        right: 0
+        padding: 14px 14px
+        transition: all 0.3s
+
+    &__arrow > img
+        transition: transform 0.3s
+
+    &__active p
+        max-height: 500px
+        opacity: 1
+
+    &__active &__arrow > img
+        transition-origin: center
+        transform: rotate(180deg)
+
+    &__item
+        cursor: pointer
+        padding-right: 150px
+        box-sizing: border-box
+
+    &__item:hover &__arrow
+        background: v.$lightGray
+        border-radius: 10px
+
+    +mixins.respond("lg")
+        &__item
+            padding: 31px 0
+            border-top: 1px solid v.$gray
