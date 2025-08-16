@@ -1,0 +1,33 @@
+@use '../base/_color' as v
+
+.request
+    padding: 96px 0
+
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__title
+        font-size: 2rem
+        font-weight: normal
+        margin-bottom: 24px
+
+    &__desc
+        color: v.$gray
+        margin-bottom: 24px
+
+    &__input
+        display: flex
+        flex-direction: column
+        gap: 24px
+        margin-bottom: 24px
+
+    &__input > input, &__input > textarea
+        padding: 10px 16px
+        box-sizing: border-box
+        border: 1px solid v.$orange
+        border-radius: 6px
+
+    &__input > textarea
+        resize: none

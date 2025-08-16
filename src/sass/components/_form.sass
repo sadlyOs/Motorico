@@ -8,6 +8,10 @@
     padding: 96px 0
     position: relative
 
+    &--contact
+        background: v.$white
+        padding: 96px 0
+        margin-top: 0
     label
         display: block
         font-size: 1.1rem
@@ -33,6 +37,11 @@
         left: 5px
         z-index: 1
 
+    &__background--contact
+        top: 60%
+        left: 35%
+        z-index: 0
+
     &__header ul, &__header span
         color: v.$gray
         line-height: 1.5
@@ -42,33 +51,45 @@
         margin-top: 24px
         padding-left: 30px
         list-style-type: disc
-        
+
     &__img
         margin-top: 96px
+
+    &__img--contact
+        z-index: 1
+        margin-top: 0
 
     &__right
         flex: 1
         padding: 48px
         background: v.$white
-    
+        z-index: 1
+
+    &__right--contact
+        padding: 0
+
     &__header-item
         font-size: 1.4rem
         font-weight: bold
         line-height: 2rem
         margin-bottom: 10px
-    
+
     &__col
         margin-bottom: 32px
 
-    &__inputs
+    &__inputs, &__two-col
         display: flex
         flex-wrap: wrap
         justify-content: space-between
         gap: 20px
-    
+
+    &__inputs--second
+        display: flex
+        flex-direction: column
+
     &__input
         flex-grow: 1
-    
+
     &__input > input
         width: 100%
         padding: 16px 16px
@@ -85,12 +106,20 @@
         border: none
         border-radius: 5px
 
+    &__input > textarea
+        width: 100%
+        padding: 12px 16px
+        border: none
+        border-radius: 5px
+        background: v.$lightGray
+        resize: none
+        box-sizing: border-box
 
     &__inputs--date
         display: flex
         flex-direction: column
         gap: 16px
-    
+
     &__date
         display: flex
         flex-wrap: wrap
@@ -106,7 +135,7 @@
         &__background
             display: none
 
-    +mixins.respond("xl")
+    +mixin  s.respond("xl")
         &__left
                 justify-content: start
 
@@ -117,9 +146,12 @@
     +mixins.respond('sm')
         &__img img
             width: 50%
-        
+
+        &__container--contact
+            flex-direction: column
+
+        &__img--contact
+            margin: 20px 0
+
         // &__date
         //     flex-direction: column
-
-        
-    

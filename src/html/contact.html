@@ -86,8 +86,8 @@
             <nav class="header__nav menu">
             <ul class="menu__list">
                 <li class="menu__item"><a href="#">Home</a></li>
-                <li class="menu__item"><a href="#">Products</a></li>
-                <li class="menu__item"><a href="#">FAQ</a></li>
+                <li class="menu__item"><a href="./products.html">Products</a></li>
+                <li class="menu__item"><a href="./FAQ.html">FAQ</a></li>
             </ul>
             </nav>
         </div>
@@ -126,7 +126,7 @@
             </a>
         </div>
         <div class="header__element">
-            <a href="./contact.html" class="header__button">
+            <a href="./src/html/contact.html" class="header__button">
             <div class="header__button-img">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -142,117 +142,170 @@
         </div>
         </div>
     </header>
-
     <main>
-        <section class="products">
-            <div class="products__container container">
-                <h1 class="products__title">Product Catalog</h1>
-                <div class="products__list">
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20.png" alt="Product 1" />
-                        <h3>Arm Prosthesis</h3>
-                        <p>Lightweight design with advanced grip control. Perfect for daily activities and sports.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
+        <section class="section__form">
+            <div class="form form--contact">
+                <div class="form__container form__container--contact container">
+                    <div class="form__left">
+                        <div class="form__header">
+                            <h2>Contact Us</h2>
+                            <span>Fill in the form to get in touch.</span>
+                        </div>
+                        <div class="form__img form__img--contact">
+                            <img src="../assets/images/form2.png" alt="form1">
+                        </div>
+                        <div class="form__background form__background--contact">
+                            <img src="../assets/images/points2.png" alt="points">
+                        </div>
                     </div>
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20-1.png" alt="Product 2" />
-                        <h3>Leg Prosthesis</h3>
-                        <p>Enhanced mobility with ergonomic support. Ideal for walking and running.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
+                    <div class="form__right form__right--contact">
+                        <form action="#" class="form__items">
+                            <div class="form__col">
+                                <div class="form__inputs form__inputs--second">
+                                    <div class="form__two-col">
+                                        <div class="form__input">
+                                            <label for="firstName">First name</label>
+                                            <input type="text" id="firstName" name="firstName" placeholder="Enter your name" required />
+                                        </div>
+                                        <div class="form__input">
+                                            <label for="lastName">Last name</label>
+                                            <input type="tel" id="lastName" name="lastName" placeholder="Enter your phone" required />
+                                        </div>
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="company">Company name</label>
+                                        <input type="text" id="company" name="company" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="selectSize">Company size</label>
+                                        <select name="selectSize" id="selectSize">
+                                            <option value="test">Size</option>
+                                            <option value="test">Size</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__input">
+                                        <label for="topic">Which topic best fit your needs?</label>
+                                        <select name="topic" id="topic">
+                                            <option value="test">Topic</option>
+                                            <option value="test">Topic</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form__input">
+                                        <label for="textarea">How can we help?</label>
+                                        <textarea rows="5" name="textarea" id="textarea" placeholder="Please share what you want us to help"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__submit">
+                                <button type="submit" class="form__button link-button">
+                                    <span>Submit</span>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20-2.png" alt="Product 3" />
-                        <h3>Hand Prosthesis</h3>
-                        <p>Multi-functional grip for versatile tasks. Compact and lightweight design.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact__info">
+            <div class="contact__container container">
+                <div class="contact__content">
+                    <div class="contact__header">
+                        <p>Follow Us</p>
                     </div>
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20-3.png" alt="Product 1" />
-                        <h3>Custom Arm Fit</h3>
-                        <p>Tailored for maximum comfort and performance.Supports various grip styles.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
-                    </div>
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20-4.png" alt="Product 2" />
-                        <h3>Running Prosthesis</h3>
-                        <p>Optimized for speed and agility.Perfect for athletes and active users.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
-                    </div>
-                    <div class="products__item">
-                        <img src="../../src/assets/images/products/Image 20-5.png" alt="Product 3" />
-                        <h3>Robotic Hand</h3>
-                        <p>Advanced robotics for precise movements.Seamless integration with neural inputs.</p>
-                        <a href="#" class="products__btn second__button">Learn More</a>
+                    <div class="contact__links">
+                        <div class="contact__social">
+                            <a href="#">
+                                <img src="../assets/icons/twitter2.svg" alt="twitter">
+                                <span>0 Twitter</span>
+                            </a>
+                            <a href="#">
+                                <img src="../assets/icons/facebook2.svg" alt="facebook">
+                                <span>0 Facebook</span>
+                            </a>
+                            <a href="#">
+                                <img src="../assets/icons/linkedin2.svg" alt="linkedin">
+                                <span>0 LinkedIn</span>
+                            </a>
+                            <a href="#">
+                                <img src="../assets/icons/instagram.svg" alt="instagram">
+                                <span>О Instagram</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
-    <div class="container">
-        <div class="footer__content">
-        <div class="footer__col footer__col--logo">
-            <img src="../../src/assets/icons/logo2.svg" alt="logo">
-            <h3>Prosthesis Connect</h3>
-        </div>
-        <div class="footer__col footer__col--subscribe">
-            <h4>Subscribe to our newsletter</h4>
-            <input type="email" placeholder="Enter your email" />
-            <button class="link-button footer__btn">Subscribe</button>
-        </div>
-        <div class="footer__col footer__col--lists">
-            <div class="footer__list">
-            <span>Product</span>
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-            </ul>
+        <div class="container">
+            <div class="footer__content">
+            <div class="footer__col footer__col--logo">
+                <img src="../../src/assets/icons/logo2.svg" alt="logo">
+                <h3>Prosthesis Connect</h3>
             </div>
+            <div class="footer__col footer__col--subscribe">
+                <h4>Subscribe to our newsletter</h4>
+                <input type="email" placeholder="Enter your email" />
+                <button class="link-button footer__btn">Subscribe</button>
+            </div>
+            <div class="footer__col footer__col--lists">
+                <div class="footer__list">
+                <span>Product</span>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+                </div>
 
-            <div class="footer__list">
-            <span>Resources</span>
-            <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">User guides</a></li>
-                <li><a href="#">Webinars</a></li>
-            </ul>
-            </div>
+                <div class="footer__list">
+                <span>Resources</span>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">User guides</a></li>
+                    <li><a href="#">Webinars</a></li>
+                </ul>
+                </div>
 
-            <div class="footer__list">
-            <span>Company</span>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
+                <div class="footer__list">
+                <span>Company</span>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                </div>
+                <div class="footer__list">
+                <span>Plans & Pricing</span>
+                <ul>
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Start up</a></li>
+                    <li><a href="#">Organization</a></li>
+                </ul>
+                </div>
             </div>
-            <div class="footer__list">
-            <span>Plans & Pricing</span>
-            <ul>
-                <li><a href="#">Personal</a></li>
-                <li><a href="#">Start up</a></li>
-                <li><a href="#">Organization</a></li>
-            </ul>
+            <div class="footer__col footer__col--other">
+                <div class="footer__links">
+                <p>© 2024 Brand, Inc.</p>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+                </div>
+                <!-- <div class="footer__social">
+                <a href="#"><img src="./src/icons/twitter.svg" alt="twitter"></a>
+                <a href="#"><img src="./src/icons/facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="./src/icons/linkedin.svg" alt="linkedin"></a>
+                <a href="#"><img src="./src/icons/youtube.svg" alt="youtube"></a>
+                </div> -->
+            </div>
             </div>
         </div>
-        <div class="footer__col footer__col--other">
-            <div class="footer__links">
-            <p>© 2024 Brand, Inc.</p>
-            <ul>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Sitemap</a></li>
-            </ul>
-            </div>
-            <!-- <div class="footer__social">
-            <a href="#"><img src="./src/icons/twitter.svg" alt="twitter"></a>
-            <a href="#"><img src="./src/icons/facebook.svg" alt="facebook"></a>
-            <a href="#"><img src="./src/icons/linkedin.svg" alt="linkedin"></a>
-            <a href="#"><img src="./src/icons/youtube.svg" alt="youtube"></a>
-            </div> -->
-        </div>
-        </div>
-    </div>
     </footer>
 </body>
 </html>

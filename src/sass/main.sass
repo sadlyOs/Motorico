@@ -1,4 +1,5 @@
 @use "../../node_modules/normalize.css/normalize.css"
+@use './base/_color' as v
 @use "./base/_font.sass"
 @use "./base/_container.sass"
 @use "./components/_header.sass"
@@ -10,6 +11,8 @@
 @use "./components/_footer"
 @use "./components/_product"
 @use "./components/_faq"
+@use "./components/_contact"
+@use "./components/_request"
 
 body
     font-family: 'Inter'
@@ -25,6 +28,9 @@ h2
 input[type="date"]
     appearance: none
     width: 100%
+
+input::placeholder
+    color: v.$gray
 
 select
     appearance: none
