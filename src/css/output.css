@@ -333,7 +333,7 @@ template {
   gap: 10px;
   flex: 1 0 auto;
   padding-right: 50px;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.0545rem + 0.7273vw, 1.75rem);
 }
 .header__adapt {
   width: 100%;
@@ -414,8 +414,8 @@ template {
   }
   .header__burger-container > span {
     display: block;
-    width: 40px;
-    height: 5px;
+    width: 30px;
+    height: 2px;
     background: #000000;
     animation: burgerBlack 0.7s;
     transition: all 0.3s;
@@ -423,12 +423,12 @@ template {
   .header__burger-container > span:first-child {
     content: "";
     position: absolute;
-    top: -10px;
+    top: -6px;
     left: 0;
   }
   .header__burger-container > span:last-child {
     content: "";
-    top: 10px;
+    top: 6px;
     left: 0;
     position: absolute;
   }
@@ -477,7 +477,7 @@ template {
     gap: 10px;
     z-index: 10;
     background: #000000;
-    opacity: 0.5;
+    opacity: 0.9;
     animation: phone-menu 0.3s;
   }
   .header__phone-menu.hide {
@@ -494,7 +494,7 @@ template {
     100% {
       transform: translateX(0);
       visibility: visible;
-      opacity: 0.5;
+      opacity: 0.9;
     }
   }
   @keyframes phone-menu-hide {
@@ -578,9 +578,18 @@ template {
   background: url("../assets/images/mainBackground.png") no-repeat center/cover;
   position: relative;
 }
+.main-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 .main-section__text {
+  position: relative;
   color: #FFFFFF;
   padding-top: 500px;
+  z-index: 2;
 }
 .main-section__text > h1 {
   font-size: clamp(2.5rem, 2.1rem + 2vw, 4rem);
@@ -737,7 +746,7 @@ template {
   padding: 0;
 }
 .form__header-item {
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1.1471rem + 0.2645vw, 1.4rem);
   font-weight: bold;
   line-height: 2rem;
   margin-bottom: 10px;
@@ -765,6 +774,18 @@ template {
   border: none;
   border-radius: 5px;
   background: #F0F1F5;
+}
+.form__input_time {
+  position: relative;
+}
+.form__input_time::after {
+  content: "";
+  position: absolute;
+  bottom: 16%;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  background: url("../assets/icons/time.svg") no-repeat;
 }
 .form__input > select {
   width: 100%;
@@ -842,6 +863,7 @@ template {
   font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem);
 }
 .footer__col--subscribe {
+  position: relative;
   text-align: center;
 }
 .footer__col--subscribe > h4 {
@@ -850,18 +872,19 @@ template {
 }
 .footer__col--subscribe > input:nth-of-type(1) {
   border: none;
-  padding: 10px 14px;
+  padding: 10px 10px 10px 40px;
+  box-sizing: border-box;
   background: #F0F1F5;
   position: relative;
 }
-.footer__col--subscribe > input:nth-of-type(1)::before {
-  content: "sadas";
+.footer__col--subscribe::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background: #000000;
+  bottom: 4px;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  background: url("../assets/icons/Mail.svg") no-repeat;
 }
 .footer__btn {
   padding-top: 10px;
@@ -931,6 +954,9 @@ template {
   .footer__links > ul {
     margin-top: 5px;
   }
+  .footer__col--subscribe::after {
+    top: 33px;
+  }
 }
 
 .products {
@@ -943,7 +969,7 @@ template {
 }
 .products__title {
   text-align: center;
-  font-size: clamp(2rem, 1.5932rem + 2.0339vw, 3.5rem);
+  font-size: 2rem;
   font-weight: normal;
   padding-bottom: 48px;
 }
@@ -964,6 +990,7 @@ template {
   box-sizing: border-box;
 }
 .products__item > p {
+  font-size: 0.875rem;
   flex-grow: 1;
   line-height: 2;
   color: #9095A0;
@@ -1134,7 +1161,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h2 {
-  font-size: clamp(2rem, 1.5932rem + 2.0339vw, 3.5rem);
+  font-size: clamp(2rem, 1.7355rem + 1.3223vw, 3rem);
   font-weight: bold;
 }
 

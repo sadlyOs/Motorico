@@ -69,7 +69,7 @@
         padding: 0
 
     &__header-item
-        font-size: 1.4rem
+        font-size: clamp(1.2rem, 1.1471rem + 0.2645vw, 1.4rem);
         font-weight: bold
         line-height: 2rem
         margin-bottom: 10px
@@ -97,6 +97,18 @@
         border: none
         border-radius: 5px
         background: v.$lightGray
+
+    &__input_time
+        position: relative
+
+    &__input_time::after
+        content: ""
+        position: absolute
+        bottom: 16%
+        right: 5px
+        width: 24px
+        height: 24px
+        background: url("../assets/icons/time.svg") no-repeat
 
     &__input > select
         width: 100%

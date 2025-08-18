@@ -18,7 +18,7 @@
     gap: 10px
     flex: 1 0 auto
     padding-right: 50px
-    font-size: 1.5rem
+    font-size: clamp(1.2rem, 1.0545rem + 0.7273vw, 1.75rem);
 
   &__adapt
     width: 100%
@@ -94,8 +94,8 @@
 
     &__burger-container > span
       display: block
-      width: 40px
-      height: 5px
+      width: 30px
+      height: 2px
       background: v.$black
       animation: burgerBlack .7s
       transition: all .3s
@@ -103,12 +103,12 @@
     &__burger-container > span:first-child
       content: ''
       position: absolute
-      top: -10px
+      top: -6px
       left: 0
 
     &__burger-container > span:last-child
       content: ''
-      top: 10px
+      top: 6px
       left: 0
       position: absolute
 
@@ -153,8 +153,9 @@
       gap: 10px
       z-index: 10
       background: v.$black
-      opacity: 0.5
+      opacity: 0.9
       animation: phone-menu .3s
+
 
     &__phone-menu.hide
       visibility: hidden
@@ -169,7 +170,7 @@
           100%
             transform: translateX(0)
             visibility: visible
-            opacity: 0.5
+            opacity: 0.9
 
       @keyframes phone-menu-hide
         0%
