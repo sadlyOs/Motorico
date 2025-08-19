@@ -1138,6 +1138,9 @@ template {
   margin-top: 20px;
 }
 .contact__social > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 14px;
   border: 2px solid #FF5733;
   border-radius: 15px;
