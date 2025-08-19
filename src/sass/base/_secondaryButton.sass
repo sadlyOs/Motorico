@@ -1,4 +1,6 @@
 @use './_color' as v
+@use './_mixins' as mixins
+@use './_variables'
 
 .second__button
     width: 100%
@@ -12,3 +14,9 @@
 .second__button:hover
     background: v.$orange
     color: v.$white
+
+
++mixins.respond("lg")
+    .second__button:hover
+        background: none
+        color: v.$orange

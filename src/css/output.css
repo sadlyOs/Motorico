@@ -632,6 +632,11 @@ template {
   background: #000000;
 }
 
+@media (max-width: 992px) and (hover: none) {
+  .link-button:hover {
+    background: #FF5733;
+  }
+}
 .second__button {
   width: 100%;
   text-align: center;
@@ -647,6 +652,12 @@ template {
   color: #FFFFFF;
 }
 
+@media (max-width: 992px) and (hover: none) {
+  .second__button:hover {
+    background: none;
+    color: #FF5733;
+  }
+}
 .section {
   margin-top: 96px;
 }
@@ -805,7 +816,7 @@ template {
   content: "";
   position: absolute;
   bottom: 16%;
-  right: 5px;
+  right: 10px;
   width: 24px;
   height: 24px;
   background: url("../assets/icons/time.svg") no-repeat;
@@ -1102,6 +1113,10 @@ template {
     padding: 31px 0;
     border-top: 1px solid #9095A0;
   }
+  .faq__item:hover .faq__arrow {
+    background: none;
+    border-radius: none;
+  }
 }
 
 .contact__container {
@@ -1129,9 +1144,11 @@ template {
   color: #FF5733;
   transition: background 0.3s, color 0.3s;
 }
-.contact__social > a > img {
-  height: 2vh;
+.contact__social > a > svg {
+  width: 20px;
+  height: 20px;
   padding-right: 10px;
+  transition: stroke 0.3s;
 }
 .contact__social > a > span {
   font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
@@ -1139,6 +1156,16 @@ template {
 .contact__social > a:hover {
   background: #FF5733;
   color: #FFFFFF;
+}
+.contact__social > a:hover svg path {
+  stroke: white;
+  fill: white;
+}
+@media (max-width: 992px) and (hover: none) {
+  .contact__social > a:hover {
+    background: none;
+    color: #FF5733;
+  }
 }
 
 .request {

@@ -1,4 +1,5 @@
 @use '../base/_color' as v
+@use '../base/_mixins' as mixins
 
 .contact
     &__container
@@ -29,9 +30,15 @@
         color: v.$orange
         transition: background .3s, color .3s
 
-    &__social > a > img
-        height: 2vh
+    &__social > a > svg
+        width: 20px
+        height: 20px
         padding-right: 10px
+        transition: stroke .3s
+
+    // &__social > a > svg path
+    //     stroke: white
+    //     fill: white
 
     &__social > a > span
         font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
@@ -39,3 +46,12 @@
     &__social > a:hover
         background: v.$orange
         color: v.$white
+
+    &__social > a:hover svg path
+        stroke: white
+        fill: white
+
+    +mixins.respond("lg")
+        &__social > a:hover
+            background: none
+            color: v.$orange

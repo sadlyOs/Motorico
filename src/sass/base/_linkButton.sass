@@ -1,4 +1,6 @@
 @use "./color" as v
+@use './_mixins' as mixins
+@use './_variables'
 
 .link-button
     color: v.$white
@@ -9,3 +11,7 @@
 
 .link-button:hover
     background: v.$black
+
++mixins.respond("lg")
+    .link-button:hover
+        background: v.$orange
