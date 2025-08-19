@@ -359,6 +359,20 @@ template {
   outline: none;
   appearance: none;
 }
+.header__mobile-select {
+  position: relative;
+}
+.header__mobile-select > .header__select {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+.header__mobile-select > svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
 .header__lang img {
   position: absolute;
   right: 10px;
@@ -664,17 +678,26 @@ template {
   gap: 10px;
 }
 .section__right {
+  text-align: right;
   flex: 1;
 }
 .section__right img {
   height: 100%;
+  border-radius: 10px;
 }
 @media (max-width: 992px) and (hover: none) {
   .section__left {
     padding: 40px 20px;
   }
   .section__right {
-    display: none;
+    text-align: start;
+  }
+  .section__right img {
+    max-width: 100%;
+    height: auto;
+  }
+  .section__container {
+    flex-direction: column;
   }
 }
 

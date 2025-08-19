@@ -44,6 +44,21 @@
     outline: none
     appearance: none
 
+  &__mobile-select
+    position: relative
+
+  &__mobile-select > &__select
+      background-color: v.$black
+      color: v.$white
+      border: 2px solid v.$white
+
+  &__mobile-select > svg
+    position: absolute
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+
+
   &__lang img
     position: absolute
     right: 10px

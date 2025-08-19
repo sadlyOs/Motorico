@@ -32,12 +32,19 @@
         gap: 10px
 
     &__right
+        text-align: right
         flex: 1
     &__right img
         height: 100%
+        border-radius: 10px
 
     +mixins.respond("lg")
         &__left
             padding: 40px 20px
         &__right
-            display: none
+            text-align: start
+        &__right img
+            max-width: 100%
+            height: auto
+        &__container
+            flex-direction: column
