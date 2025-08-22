@@ -6,7 +6,7 @@
   padding: 10px 15px
   display: flex
   align-items: center
-  border-bottom: 1px solid v.$gray
+  border-bottom: 1px solid v.$lightGray
   // gap: 17px
 
   &__burger-container, &__phone-menu
@@ -19,6 +19,7 @@
     flex: 1 0 auto
     padding-right: 120px
     font-size: clamp(1.2rem, 1.1492rem + 0.254vw, 1.4rem)
+    font-weight: normal
 
   &__adapt
     width: 100%
@@ -143,6 +144,9 @@
 
   &__button-img
     position: relative
+    // font-size: 0.9rem
+  &__element a
+    font-size: 1rem
 
   &__button-img > svg:nth-child(2)
     position: absolute
@@ -299,7 +303,7 @@
     transition: all .3s
     text-decoration: none
     color: v.$black
-    font-weight: 600
+    font-weight: 500
 
   &__item > a::after
     content: ''
@@ -318,6 +322,7 @@
 
   &__item > a:hover
     color: v.$orange
+    font-weight: 500
 
   &__item > a:hover::after
     width: 100%

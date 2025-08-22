@@ -3,10 +3,13 @@
 @use '../base/_variables'
 
 .footer
-    padding-top: 96px
+    padding-top: 56px
     padding-bottom: 31px
 
+    border-top: 1px solid v.$lightGray
+
     &__content
+        position: relative
         display: flex
         flex-direction: column
         align-items: center
@@ -15,14 +18,15 @@
     &__col--logo
         display: flex
         gap: 14px
-        font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem);
+        font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem)
 
     &__col--subscribe
         position: relative
         text-align: center
+        margin-bottom: 50px
 
     &__col--subscribe > h4
-        font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem);
+        font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem)
         margin-bottom: 5px
 
     &__col--subscribe > input:nth-of-type(1)
@@ -57,17 +61,18 @@
     &__list > span
         display: block
         font-weight: bold
-        font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem);
+        font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem)
         margin-bottom: 12px
         // justify-content: center
 
     &__list li
-        font-size: clamp(0.9rem, 0.8733rem + 0.1333vw, 1rem);
+        font-size: 0.9rem
 
     &__list li:not(:last-child)
         margin-bottom: 12px
 
     &__col--other
+        position: relative
         display: flex
         justify-content: center
 
@@ -88,9 +93,23 @@
     &__links a:hover, &__list a:hover
         color: v.$orange
 
+    &__icons
+        display: flex
+        gap: 18px
+        align-items: center
+        position: absolute
+        bottom: 0
+        right: 0
+
+    &__icons > a:hover
+        transform: scale(1.2)
+
     +mixins.respond("md")
         &__col--lists
             gap: 50px
+
+        &__icons
+            gap: 5px
 
     +mixins.respond("sm")
         &__btn
@@ -111,3 +130,7 @@
 
         &__col--subscribe::after
             top: 33px
+
+        &__icons
+            position: static
+            gap: 18px

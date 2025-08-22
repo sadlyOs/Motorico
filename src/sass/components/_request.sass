@@ -1,4 +1,5 @@
 @use '../base/_color' as v
+@use '../base/_mixins' as mixins
 
 .request
     padding: 96px 0
@@ -31,3 +32,16 @@
 
     &__input > textarea
         resize: none
+
+    &__submit
+        text-align: center
+
+    &__btn
+        background: v.$orange
+        color: white
+        width: fit-content
+        padding: 9px 73px
+        cursor: pointer
+
+    +mixins.respond("md")
+        padding: 40px 0

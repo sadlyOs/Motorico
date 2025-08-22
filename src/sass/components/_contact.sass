@@ -9,18 +9,23 @@
 
     &__header
         text-align: center
-        font-size: clamp(1.5rem, 1.2355rem + 1.3223vw, 2.5rem);
+        font-size: clamp(1.5rem, 1.2355rem + 1.3223vw, 2.5rem)
 
     &__links
         text-align: center
 
     &__social
         display: flex
-        flex-direction: column
+        flex-wrap: wrap
+        justify-content: center
+        // flex-direction: column
         gap: 20px
         margin-top: 20px
 
-    &__social > a
+    &__social > div > a:last-child
+        margin-top: 20px
+
+    &__social a
         display: flex
         justify-content: center
         align-items: center
@@ -30,7 +35,7 @@
         color: v.$orange
         transition: background .3s, color .3s
 
-    &__social > a > svg
+    &__social a svg
         width: 20px
         height: 20px
         padding-right: 10px
@@ -40,14 +45,14 @@
     //     stroke: white
     //     fill: white
 
-    &__social > a > span
-        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
+    &__social  a > span
+        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem)
 
-    &__social > a:hover
+    &__social  a:hover
         background: v.$orange
         color: v.$white
 
-    &__social > a:hover svg path
+    &__social  a:hover svg path
         stroke: white
         fill: white
 
