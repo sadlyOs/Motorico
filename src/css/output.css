@@ -323,6 +323,7 @@ template {
   padding: 10px 15px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #9095A0;
 }
 .header__burger-container, .header__phone-menu {
   display: none;
@@ -332,8 +333,8 @@ template {
   align-items: center;
   gap: 10px;
   flex: 1 0 auto;
-  padding-right: 50px;
-  font-size: clamp(1.2rem, 1.0545rem + 0.7273vw, 1.75rem);
+  padding-right: 120px;
+  font-size: clamp(1.2rem, 1.1492rem + 0.254vw, 1.4rem);
 }
 .header__adapt {
   width: 100%;
@@ -351,13 +352,85 @@ template {
   border-radius: 10px;
 }
 .header__select {
+  position: relative;
   background-color: #E0E1FA;
-  padding: 15px 70px 15px 10px;
+  padding: 20px 70px 20px 70px;
   border: none;
   border-radius: 10px;
   font-size: clamp(0.9rem, 0.2502rem + 1.048vw, 1.2rem);
   outline: none;
   appearance: none;
+  cursor: pointer;
+}
+.header__select::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 40%;
+  right: 5px;
+  background: url("../assets/icons/arrow.svg") no-repeat;
+  transition: transform 0.5s;
+}
+.header__select.active::after {
+  display: inline-block;
+  transform: rotate(360deg);
+}
+@media (max-width: 768px) and (hover: none) {
+  .header__select::after {
+    right: 10px;
+  }
+}
+.header .select__head {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.header .select__list {
+  position: absolute;
+  z-index: 10;
+  width: 50%;
+  top: 0;
+  left: 0;
+  transform: translateY(45px);
+  background: #E0E1FA;
+  border-radius: 10px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.2s;
+}
+.header .select__list.active {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(45px);
+  transition: all 0.3s;
+}
+.header .select__list > li {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.header .select__list > li > img {
+  height: 1.5vh;
+  padding-right: 10px;
+  pointer-events: none;
+}
+.header .select__list > li:hover {
+  cursor: pointer;
+  background: #8b8c9f;
+  color: white;
+}
+@media (max-width: 768px) and (hover: none) {
+  .header .select__item {
+    color: #000000;
+  }
 }
 .header__mobile-select {
   position: relative;
@@ -373,18 +446,11 @@ template {
   right: 10px;
   transform: translateY(-50%);
 }
-.header__lang img {
-  position: absolute;
-  right: 10px;
-  top: 40%;
-  transform: translateY(-90%);
-  transform: scale(1.3);
-}
 .header__button {
   display: flex;
   gap: 10px;
   font-size: clamp(0.9rem, 0.2502rem + 1.048vw, 1.2rem);
-  padding: 12px 18px;
+  padding: 9px 18px;
   border: 2px solid #000000;
   border-radius: 15px;
   transition: all 0.3s;
@@ -406,12 +472,30 @@ template {
 .header__button:hover svg path {
   stroke: #FFFFFF;
 }
+.header__top {
+  padding: 100px 15px;
+}
+.header__top .header__element {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.header__top .menu__item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 1200px) and (hover: none) {
   .header {
     gap: 10px;
   }
   .header__logo {
-    padding-right: 0;
+    padding-right: 20px;
   }
 }
 @media (max-width: 992px) and (hover: none) {
@@ -478,6 +562,7 @@ template {
     }
   }
   .header__phone-menu {
+    padding: 15px 0;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -486,8 +571,6 @@ template {
     visibility: visible;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
     z-index: 10;
     background: #000000;
@@ -547,28 +630,33 @@ template {
   transition: all 0.3s;
   text-decoration: none;
   color: #000000;
+  font-weight: 600;
 }
-.menu__item > a:hover {
-  color: #FF5733;
-}
-.menu__item > a:hover::after {
+.menu__item > a::after {
   content: "";
   bottom: -20px;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  width: 100%;
+  width: 0px;
   height: 4px;
-  padding: 0 50px;
   text-align: center;
   box-sizing: border-box;
   background-color: #FF5733;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  transition: all 0.3s;
+}
+.menu__item > a:hover {
+  color: #FF5733;
+}
+.menu__item > a:hover::after {
+  width: 100%;
+  padding: 0 50px;
 }
 @media (max-width: 1200px) and (hover: none) {
   .menu__list {
-    gap: 5px;
+    gap: 20px;
   }
 }
 @media (max-width: 992px) and (hover: none) {
@@ -577,7 +665,7 @@ template {
   }
   .menu__item > a {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .menu__item > a:hover {
     color: #FFFFFF;
@@ -602,7 +690,7 @@ template {
 .main-section__text {
   position: relative;
   color: #FFFFFF;
-  padding-top: 500px;
+  padding-top: 400px;
   z-index: 2;
 }
 .main-section__text > h1 {
