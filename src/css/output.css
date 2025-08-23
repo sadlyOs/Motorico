@@ -170,7 +170,7 @@
   stroke: #FFFFFF;
 }
 .header__top {
-  padding: 100px 15px;
+  padding: 100px 15px 10px 15px;
 }
 .header__top .header__element {
   width: 60%;
@@ -184,8 +184,7 @@
 }
 .header__bottom {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 15px;
 }
 @media (max-width: 1200px) and (hover: none) {
   .header {
