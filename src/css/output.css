@@ -466,7 +466,7 @@
   flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 64px 102px;
+  padding: 64px 80px;
   box-sizing: border-box;
 }
 .section__left > p {
