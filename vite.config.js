@@ -1,13 +1,17 @@
-export default {
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
+
+export default defineConfig({
+  base: './', // чтобы пути были относительные
   build: {
     rollupOptions: {
       input: {
-        main: './index.html',
-        FAQ: 'src/html/FAQ.html',
-        contact: 'src/html/contact.html',
-        product: 'src/html/products.html',
-        request: 'src/html/request.html',
+        main: resolve(__dirname, 'index.html'),
+        contact: resolve(__dirname, './src/html/contact.html'),
+        products: resolve(__dirname, './src/html/products.html'),
+        faq: resolve(__dirname, './src/html/FAQ.html'),
+        request: resolve(__dirname, './src/html/request.html'),
       }
     }
   }
-}
+});

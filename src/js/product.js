@@ -1,42 +1,42 @@
 const data = [
     {
         id: 1,
-        img: "../assets/images/products/Image 20.png",
+        img: "/images/products/Image 20.png",
         title: "Arm Prosthesis",
         desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, officiis, hic eveniet in facilis illo commodi aut architecto velit similique quo, exercitationem aperiam ad porro ipsam iure expedita. Fuga saepe ducimus voluptates nobis consequuntur. Consequuntur? dfdfsfsdfsdfsdfsfsdfdsf"
     },
 
     {
         id: 2,
-        img: "../assets/images/products/Image 20-1.png",
+        img: "/images/products/Image 20-1.png",
         title: "Leg Prosthesis",
         desc: "Enhanced mobility with ergonomic support. Ideal for walking and running."
     },
 
     {
         id: 3,
-        img: "../assets/images/products/Image 20-2.png",
+        img: "/images/products/Image 20-2.png",
         title: "Hand Prosthesis",
         desc: "Multi-functional grip for versatile tasks. Compact and lightweight design."
     },
 
     {
         id: 4,
-        img: "../assets/images/products/Image 20-3.png",
+        img: "/images/products/Image 20-3.png",
         title: "Custom Arm Fit",
         desc: "Tailored for maximum comfort and performance.Supports various grip styles."
     },
 
     {
         id: 5,
-        img: "../assets/images/products/Image 20-4.png",
+        img: "/images/products/Image 20-4.png",
         title: "Running Prosthesis",
         desc: "Optimized for speed and agility.Perfect for athletes and active users."
     },
 
     {
         id: 6,
-        img: "../assets/images/products/Image 20-5.png",
+        img: "/images/products/Image 20-5.png",
         title: "Robotic Hands",
         desc: "Advanced robotics for precise movements.Seamless integration with neural inputs"
     },
@@ -72,7 +72,7 @@ Array.from(document.querySelectorAll(".products__btn")).forEach(btn => {
                                 </div>
                             </div>
                             <div class="products__cancel" id="cancel">
-                                <img src="../assets/icons/cancel.svg" alt="cancel">
+                                <img src="/icons/cancel.svg" alt="cancel">
                             </div>
                             `
         document.getElementById("cancel").addEventListener("click", () => {

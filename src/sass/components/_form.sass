@@ -7,6 +7,7 @@
     margin-top: 96px
     padding: 96px 0
     position: relative
+    z-index: 10
 
     &--contact
         background: v.$white
@@ -35,12 +36,15 @@
         position: absolute
         top: 50px
         left: 5px
-        z-index: 1
+        z-index: 0
 
     &__background--contact
         top: 60%
         left: 35%
         z-index: 0
+
+    &__header
+        z-index: 1
 
     &__header ul, &__header span
         color: v.$gray
@@ -108,7 +112,7 @@
         right: 10px
         width: 24px
         height: 24px
-        background: url("../assets/icons/time.svg") no-repeat
+        background: url("../../public/icons/time.svg") no-repeat
 
     &__input > select
         width: 100%
@@ -143,13 +147,13 @@
         border-radius: 5px
         padding: 16px 0
 
-    @media screen and (max-width: 1718px)
-        &__background
-            display: none
+    // @media screen and (max-width: 1718px)
 
     +mixins.respond("xl")
         &__left
             justify-content: start
+        &__background
+            display: none
 
     +mixins.respond("lg")
 

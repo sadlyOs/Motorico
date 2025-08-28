@@ -7,7 +7,7 @@
   src: url("../font/Archivo/Archivo-Regular.woff2") format("woff2"), url("../font/Archivo/Archivo-Regular.woff") format("woff");
 }
 .container {
-  max-width: 1520px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -63,7 +63,7 @@
   height: 15px;
   top: 40%;
   right: 5px;
-  background: url("../assets/icons/arrow.svg") no-repeat;
+  background: url("/public/icons/arrow.svg") no-repeat;
   transition: transform 0.5s;
 }
 .header__select.active::after {
@@ -268,7 +268,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 10;
+    z-index: 11;
     background: #000000;
     opacity: 0.9;
     animation: phone-menu 0.3s;
@@ -374,7 +374,7 @@
 
 .main-section {
   height: 100vh;
-  background: url("../assets/images/mainBackground.png") no-repeat center/cover;
+  background: url("../../public/images/mainBackground.png") no-repeat center/cover;
   position: relative;
 }
 .main-section::before {
@@ -384,10 +384,17 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+.main-section .main__container {
+  height: 100%;
+}
 .main-section__text {
   position: relative;
   color: #FFFFFF;
-  padding-top: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-top: 100px;
   z-index: 2;
 }
 .main-section__text > h1 {
@@ -400,7 +407,7 @@
 }
 @media (max-width: 576px) and (hover: none) {
   .main-section__text {
-    padding-top: 300px;
+    padding-top: 0px;
     text-align: center;
   }
 }
@@ -463,8 +470,8 @@
   box-sizing: border-box;
 }
 .section__left > p {
-  font-size: clamp(1rem, 0.8915rem + 0.5424vw, 1.4rem);
   line-height: 2rem;
+  font-size: clamp(1rem, 0.8915rem + 0.5424vw, 1.4rem);
 }
 .section__left > h2 {
   margin-top: 20px;
@@ -514,6 +521,7 @@
   margin-top: 96px;
   padding: 96px 0;
   position: relative;
+  z-index: 10;
 }
 .form--contact {
   background: #FFFFFF;
@@ -543,12 +551,15 @@
   position: absolute;
   top: 50px;
   left: 5px;
-  z-index: 1;
+  z-index: 0;
 }
 .form__background--contact {
   top: 60%;
   left: 35%;
   z-index: 0;
+}
+.form__header {
+  z-index: 1;
 }
 .form__header ul, .form__header span {
   color: #9095A0;
@@ -616,7 +627,7 @@
   right: 10px;
   width: 24px;
   height: 24px;
-  background: url("../assets/icons/time.svg") no-repeat;
+  background: url("../../public/icons/time.svg") no-repeat;
 }
 .form__input > select {
   width: 100%;
@@ -651,14 +662,12 @@
   border-radius: 5px;
   padding: 16px 0;
 }
-@media screen and (max-width: 1718px) {
-  .form__background {
-    display: none;
-  }
-}
 @media (max-width: 1200px) and (hover: none) {
   .form__left {
     justify-content: start;
+  }
+  .form__background {
+    display: none;
   }
 }
 @media (max-width: 992px) and (hover: none) {
@@ -729,7 +738,7 @@
   left: 13px;
   width: 24px;
   height: 24px;
-  background: url("../assets/icons/Mail.svg") no-repeat;
+  background: url("/icons/Mail.svg") no-repeat;
 }
 .footer__btn {
   padding-top: 10px;

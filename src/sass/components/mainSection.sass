@@ -4,7 +4,7 @@
 
 .main-section
     height: 100vh
-    background: url('../assets/images/mainBackground.png') no-repeat center/cover
+    background: url('../../public/images/mainBackground.png') no-repeat center/cover
     position: relative
 
     &::before
@@ -14,10 +14,17 @@
         background: rgba(0,0,0,0.5)
         z-index: 1
 
+    .main__container
+        height: 100%
+
     &__text
         position: relative
         color: v.$white
-        padding-top: 400px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+        padding-top: 100px
         z-index: 2
 
     &__text > h1
@@ -29,5 +36,5 @@
 
     +mixins.respond("sm")
         &__text
-            padding-top: 300px
+            padding-top: 0px
             text-align: center
