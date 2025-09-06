@@ -1,5 +1,5 @@
 @use '../base/_color.sass' as v
-@use '../base/_variables.sass'
+@use '../base/_variables.sass' as var
 @use '../base/_mixins.sass'
 
 .header
@@ -17,9 +17,9 @@
     align-items: center
     gap: 10px
     flex: 1 0 auto
-    padding-right: 120px
-    font-size: clamp(1.2rem, 1.1492rem + 0.254vw, 1.4rem)
-    font-weight: normal
+    font-size: clamp(1.2rem, 1.0533rem + 0.7333vw, 1.75rem);
+    font-family: var.$font-inter
+    font-weight: 400
 
   &__adapt
     width: 100%
@@ -29,12 +29,15 @@
 
   &__links
     flex: 1 0 auto
+    display: flex
+    justify-content: center
 
   &__lang
     position: relative
     background-color: v.$lightViolet
     border: 1px solid v.$lightViolet
     border-radius: 10px
+    margin-right: 20px
 
   &__select
     position: relative
@@ -47,6 +50,7 @@
     appearance: none
     cursor: pointer
 
+
   &__select::after
     content: ''
     position: absolute
@@ -54,7 +58,7 @@
     height: 15px
     top: 40%
     right: 5px
-    background: url('/public/icons/arrow.svg') no-repeat
+    background: url('/icons/arrow.svg') no-repeat
     transition: transform .5s
 
   &__select.active::after
@@ -73,6 +77,9 @@
       top: 50%
       transform: translateY(-50%)
       pointer-events: none
+      font-family: var.$font-inter
+      font-weight: 400
+      font-size: 14px
 
     &__list
       position: absolute
@@ -88,6 +95,7 @@
       opacity: 0
       transform: translateY(-20px)
       transition: all .2s
+      font-size: 14px
 
     &__list.active
       width: 100%
@@ -280,6 +288,7 @@
           visibility: hidden
 
     &__links
+      display: block
       flex: none
       margin-bottom: 10px
 
@@ -292,7 +301,7 @@
 
 .menu
   &__list
-    display: flex
+    display: flex 
     gap: 60px
     list-style: none
 
@@ -302,7 +311,8 @@
     transition: all .3s
     text-decoration: none
     color: v.$black
-    font-weight: 500
+    font-family: var.$font-roboto
+    font-weight: 400
 
   &__item > a::after
     content: ''
@@ -314,14 +324,13 @@
     height: 4px
     text-align: center
     box-sizing: border-box
-    background-color: v.$orange
+    background-color: v.$darkblue
     border-bottom-left-radius: 30px
     border-bottom-right-radius: 30px
     transition: all .3s
 
   &__item > a:hover
-    color: v.$orange
-    font-weight: 500
+    color: v.$darkblue
 
   &__item > a:hover::after
     width: 100%

@@ -1,10 +1,65 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../font/Roboto/Roboto-Regular.woff2") format("woff2"), url("../font/Roboto/Roboto-Regular.woff") format("woff");
+  src: url("/src/font/Roboto/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/font/Roboto/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/font/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/font/Inter/Inter18pt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/font/Inter/Inter18pt-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/font/Inter/Inter18pt-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Archivo";
-  src: url("../font/Archivo/Archivo-Regular.woff2") format("woff2"), url("../font/Archivo/Archivo-Regular.woff") format("woff");
+  src: url("/src/font/Archivo/Archivo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("/src/font/Archivo/Archivo-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("/src/font/Archivo/Archivo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 .container {
   max-width: 1230px;
@@ -26,9 +81,9 @@
   align-items: center;
   gap: 10px;
   flex: 1 0 auto;
-  padding-right: 120px;
-  font-size: clamp(1.2rem, 1.1492rem + 0.254vw, 1.4rem);
-  font-weight: normal;
+  font-size: clamp(1.2rem, 1.0533rem + 0.7333vw, 1.75rem);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .header__adapt {
   width: 100%;
@@ -38,12 +93,15 @@
 }
 .header__links {
   flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .header__lang {
   position: relative;
   background-color: #E0E1FA;
   border: 1px solid #E0E1FA;
   border-radius: 10px;
+  margin-right: 20px;
 }
 .header__select {
   position: relative;
@@ -63,7 +121,7 @@
   height: 15px;
   top: 40%;
   right: 5px;
-  background: url("/public/icons/arrow.svg") no-repeat;
+  background: url("/icons/arrow.svg") no-repeat;
   transition: transform 0.5s;
 }
 .header__select.active::after {
@@ -81,6 +139,9 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 .header .select__list {
   position: absolute;
@@ -96,6 +157,7 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.2s;
+  font-size: 14px;
 }
 .header .select__list.active {
   width: 100%;
@@ -303,6 +365,7 @@
     }
   }
   .header__links {
+    display: block;
     flex: none;
     margin-bottom: 10px;
   }
@@ -326,7 +389,8 @@
   transition: all 0.3s;
   text-decoration: none;
   color: #000000;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .menu__item > a::after {
   content: "";
@@ -338,14 +402,13 @@
   height: 4px;
   text-align: center;
   box-sizing: border-box;
-  background-color: #FF5733;
+  background-color: #315299;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   transition: all 0.3s;
 }
 .menu__item > a:hover {
-  color: #FF5733;
-  font-weight: 500;
+  color: #315299;
 }
 .menu__item > a:hover::after {
   width: 100%;
@@ -374,7 +437,7 @@
 
 .main-section {
   height: 100vh;
-  background: url("../../public/images/mainBackground.png") no-repeat center/cover;
+  background: url("/images/mainBackground.png") no-repeat center/cover;
   position: relative;
 }
 .main-section::before {
@@ -396,14 +459,20 @@
   height: 100%;
   padding-top: 100px;
   z-index: 2;
+  font-family: "Inter", sans-serif;
 }
 .main-section__text > h1 {
   font-size: clamp(2.5rem, 2.1rem + 2vw, 4rem);
   margin-bottom: 40px;
+  font-weight: 700;
 }
 .main-section__text > p {
   font-size: 1.4rem;
   margin-bottom: 40px;
+  font-weight: 400;
+}
+.main-section__btn {
+  border-radius: 10px;
 }
 @media (max-width: 576px) and (hover: none) {
   .main-section__text {
@@ -413,11 +482,10 @@
 }
 
 .link-button {
-  font-family: "Roboto", sans-serif;
   font-weight: lighter;
   color: #FFFFFF;
   padding: 12px 20px;
-  background: #FF5733;
+  background: #315299;
   transition: background 0.3s;
   text-decoration: none;
 }
@@ -432,7 +500,6 @@
   }
 }
 .second__button {
-  font-family: "Roboto", sans-serif;
   width: 100%;
   text-align: center;
   padding: 7px 0px;
@@ -455,65 +522,6 @@
 }
 .section {
   margin-top: 96px;
-}
-.section__container {
-  display: flex;
-  flex-wrap: wrap;
-  background: #E0E1FA;
-  border-radius: 10px;
-}
-.section__left {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  padding: 64px 80px;
-  box-sizing: border-box;
-}
-.section__left > p {
-  line-height: 2rem;
-  font-size: clamp(1rem, 0.8915rem + 0.5424vw, 1.4rem);
-}
-.section__left > h2 {
-  margin-top: 20px;
-  margin-bottom: 100px;
-}
-.section__button {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section__right {
-  text-align: right;
-  flex: 3;
-}
-.section__right img {
-  max-width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-@media (max-width: 992px) and (hover: none) {
-  .section__left {
-    padding: 40px 20px;
-  }
-  .section__right {
-    text-align: start;
-  }
-  .section__right img {
-    max-width: 100%;
-    height: auto;
-  }
-  .section__container {
-    flex-direction: column;
-  }
-}
-@media (max-width: 576px) and (hover: none) {
-  .section__left > h2 {
-    margin-bottom: 50px;
-  }
-  .section__right img {
-    transform: translateY(10px);
-  }
 }
 
 .form {
@@ -627,7 +635,7 @@
   right: 10px;
   width: 24px;
   height: 24px;
-  background: url("../../public/icons/time.svg") no-repeat;
+  background: url("/icons/time.svg") no-repeat;
 }
 .form__input > select {
   width: 100%;
@@ -1173,13 +1181,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-  font-family: "Archivo", serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   padding: 0;
   margin: 0;
-}
-
-h2 {
-  font-size: clamp(2rem, 1.7355rem + 1.3223vw, 3rem);
 }
 
 input[type=date] {

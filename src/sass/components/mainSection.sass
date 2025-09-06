@@ -1,10 +1,10 @@
 @use "../base/color" as v
-@use '../base/_variables.sass'
+@use '../base/_variables.sass' as var
 @use '../base/mixins' as mixins
 
 .main-section
     height: 100vh
-    background: url('../../public/images/mainBackground.png') no-repeat center/cover
+    background: url('/images/mainBackground.png') no-repeat center/cover
     position: relative
 
     &::before
@@ -26,13 +26,19 @@
         height: 100%
         padding-top: 100px
         z-index: 2
+        font-family: var.$font-inter
 
     &__text > h1
         font-size: clamp(2.5rem, 2.1rem + 2vw, 4rem)
         margin-bottom: 40px
+        font-weight: 700
     &__text > p
         font-size: 1.4rem
         margin-bottom: 40px
+        font-weight: 400
+
+    &__btn 
+        border-radius: 10px
 
     +mixins.respond("sm")
         &__text
