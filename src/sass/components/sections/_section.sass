@@ -3,8 +3,157 @@
 @use '../../base/mixins' as mixins
 
 .section
-    margin-top: 96px
+    padding: 96px 30px
 
+    &__items
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 35px
+
+    &__header
+        text-align: center
+        // padding: 0 350px
+        margin-bottom: 64px
+
+    &__header > h2
+        font-size: clamp(2rem, 1.8678rem + 0.6612vw, 2.5rem)
+        margin-bottom: 40px
+
+    &__header > p
+        font-size: clamp(1rem, 0.9503rem + 0.2486vw, 1.188rem)
+        line-height: 1.7
+
+    &__item
+        flex: 1 0 200px
+        padding: 30px 50px
+        text-align: center
+        display: flex
+        flex-direction: column
+        gap: 16px
+        cursor: pointer
+        border-radius: 10px
+        transition: all .3s
+
+    &__item:hover
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.18)
+
+    &__title
+        font-size: clamp(1.2rem, 1.1207rem + 0.3967vw, 1.5rem)
+        font-weight: 700
+
+    &__desc
+        font-size: 1rem
+        line-height: 2
+
+    &__img > img
+        height: 10vh
+
+    &__products
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 34px
+
+    &__product
+        position: relative
+        z-index: 1
+        padding-right: 97px
+        display: flex
+        align-items: stretch
+        gap: 24px
+        border-radius: 10px
+        overflow: hidden
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.18)
+
+    &__product.blur::after
+        content: ""
+        position: absolute
+        inset: 0
+        background: rgba(255,255,255,0.6)
+        z-index: 2
+
+    &__product-left
+        flex: 1 1 50%
+        z-index: 1
+
+    &__product-left img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block
+
+    &__product-right
+        flex: 1 1 50%
+        padding: 69px 0 28px 0
+
+    &__product-right > h3
+        font-size: clamp(1.1rem, 0.9942rem + 0.5289vw, 1.5rem)
+
+    &__product-right > p
+        padding: 11px 0 25px 0
+        line-height: 1.5
+        font-size: clamp(0.9rem, 0.8736rem + 0.1322vw, 1rem)
+
+    &__product-right > a
+        color: v.$darkblue
+        font-weight: 700
+
+    &__product-btn
+        position: absolute
+        right: 15px
+        top: 15px
+
+    &__product-btn > a
+        background: v.$lightGray
+        padding: 10px 40px 10px 10px
+        border-radius: 20px
+        color: v.$darkblue
+        font-size: 0.9rem
+
+    &__product.blur &__product-btn
+        z-index: 10
+
+    &__product.blur &__product-btn > a
+        background: v.$darkblue
+        color: v.$white
+        padding: 10px 30px
+
+    +mixins.respond("lg")
+        &__products
+            grid-template-columns: repeat(1, 1fr)
+
+        &__header
+            padding: 0 100px
+
+        &__item
+            padding: 0
+
+        &__item:hover
+            box-shadow: none
+
+    +mixins.respond("sm")
+        &__product
+            padding-right: 0px
+            flex-direction: column
+
+        &__product img
+            max-width: 100%
+            height: auto
+
+        &__product-right
+            padding: 20px 10px
+
+        &__product-btn
+            display: none
+
+        &__header
+            padding: 0
+
+        &__img > img
+            height: 8vh
+
+.section-second
+    padding: 0 15px
     // &__left
     //     flex: 2
     //     display: flex

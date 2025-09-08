@@ -1,0 +1,28 @@
+<svg viewBox="0 0 61.5 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.500000" height="40.000000" fill="none" customFrame="url(#clipPath_1)">
+	<defs>
+		<clipPath id="clipPath_1">
+			<rect width="40.000000" height="40.000000" x="0.000000" y="0.000000" rx="20.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_2">
+			<rect width="28.000000" height="27.000000" x="5.500000" y="6.500000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_3">
+			<rect width="24.000000" height="24.000000" x="37.500000" y="8.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="a.social-link" width="40.000000" height="40.000000" x="0.000000" y="0.000000" rx="20.000000" fill="rgb(224,224,224)" fill-opacity="255" />
+	<rect id="i.fab fa-facebook-f" width="10.000000" height="16.000000" x="-8.500000" y="12.000000" />
+	<g id="Logo youtube 1" clip-path="url(#clipPath_2)" customFrame="url(#clipPath_2)">
+		<rect id="Logo youtube 1" width="28.000000" height="27.000000" x="5.500000" y="6.500000" fill="rgb(255,255,255)" fill-opacity="0" />
+		<g id="Group">
+			<g id="Group">
+				<g id="Group">
+					<path id="Vector" d="M30.49 15.6801C30.49 15.6801 30.28 14.1951 29.58 13.5201C28.74 12.6426 27.76 12.6426 27.34 12.5751C24.1901 12.3726 19.5 12.3726 19.5 12.3726C19.5 12.3726 14.81 12.3726 11.66 12.5751C11.24 12.6426 10.26 12.6426 9.42005 13.5201C8.72005 14.1951 8.51005 15.6801 8.51005 15.6801C8.51005 15.6801 8.30005 17.4351 8.30005 19.1901L8.30005 20.8101C8.30005 22.5651 8.51005 24.3201 8.51005 24.3201C8.51005 24.3201 8.72005 25.8051 9.42005 26.4801C10.26 27.3576 11.38 27.2901 11.87 27.4251C13.69 27.5601 19.5 27.6276 19.5 27.6276C19.5 27.6276 24.1901 27.6276 27.34 27.4251C27.76 27.3576 28.74 27.3576 29.58 26.4801C30.28 25.8051 30.49 24.3201 30.49 24.3201C30.49 24.3201 30.7 22.5651 30.7 20.8101L30.7 19.1901C30.7 17.4351 30.49 15.6801 30.49 15.6801ZM17.19 22.8351L17.19 16.7601L23.21 19.7976L17.19 22.8351Z" fill="rgb(70,114,216)" fill-rule="nonzero" />
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="Logo linkedin 1" clip-path="url(#clipPath_3)" customFrame="url(#clipPath_3)">
+		<rect id="Logo linkedin 1" width="24.000000" height="24.000000" x="37.500000" y="8.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	</g>
+</svg>

@@ -3,7 +3,20 @@
 @use '../base/_mixins' as mixins
 
 .faq
+    margin-top: 40px
     padding: 96px 0
+    background: v.$lightGray
+    position: relative
+
+    &::after
+        content: ''
+        position: absolute
+        width: 90px
+        height: 400px
+        top: 60px
+        left: 0
+        background: url('/images/points.png')
+        z-index: 0
 
     &__header
         display: flex
@@ -16,7 +29,7 @@
         margin-bottom: 30px
 
     &__desc
-        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
+        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem)
         text-align: center
         color: v.$gray
         margin-bottom: 96px
@@ -43,7 +56,6 @@
         overflow: hidden
         color: v.$gray
         transition: opacity 0.5s, max-height 0.2s
-
 
     &__arrow
         position: absolute
@@ -73,6 +85,9 @@
         border-radius: 10px
 
     +mixins.respond("lg")
+        &::after
+            display: none
+
         &__item
             padding: 31px 0
             border-top: 1px solid v.$gray
@@ -80,6 +95,13 @@
         &__item:hover &__arrow
             background: none
             border-radius: none
+
+    +mixins.respond('sm')
+        &
+            padding: 50px 0
+
+        &__arrow
+            top: -10px
 
         // *:hover
         //     all: unset

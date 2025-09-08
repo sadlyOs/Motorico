@@ -1,3 +1,5 @@
+import * as test from './faq'
+
 let toggle = false
 const burger = document.getElementById("burger")
 const select = document.getElementById("select")

@@ -1,0 +1,76 @@
+@use '../../base/mixins' as mixins
+
+.section-contacts
+    overflow: hidden
+    &__container
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+    &__text-header > span
+        display: block
+
+    &__text-header > span:first-child
+        margin-bottom: 0.2rem
+
+    &__content
+        display: flex
+        justify-content: space-between
+
+    &__left
+        flex: 1 0 45%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-left: 200px
+        box-sizing: border-box
+
+    &__col
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+    &__col > p:first-child
+        font-weight: 700
+
+    &__col span
+        display: block
+
+    &__col:first-child
+        span:last-child
+            margin-top: 0.3rem
+
+    &__right
+        flex: 1 0 60%
+
+    #IfRame
+        width: 90%
+
+    @media screen and (max-width: 1233px)
+        &__left
+            padding-left: 50px
+
+    +mixins.respond('lg')
+        &__left
+            padding-left: 0
+
+    +mixins.respond('sm')
+        &__content
+            font-size: 0.9rem
+            flex-direction: column
+
+        &__left
+            flex-direction: row
+            flex-wrap: wrap
+            gap: 10px
+
+        &__col
+            margin-bottom: 0.4rem
+
+        &__media
+            margin: 1rem 0
+
+        #IfRame
+            width: 100%
+
+    // height: 100%

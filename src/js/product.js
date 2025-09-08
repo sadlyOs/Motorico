@@ -1,3 +1,5 @@
+import * as test from './faq'
+
 const data = [
     {
         id: 1,
