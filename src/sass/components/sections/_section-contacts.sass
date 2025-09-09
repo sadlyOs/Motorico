@@ -1,7 +1,12 @@
 @use '../../base/mixins' as mixins
+@use '../../base/_color' as var
 
 .section-contacts
+    position: relative
+    background: var.$lightGray
     overflow: hidden
+    padding: 20px 30px
+
     &__container
         display: flex
         flex-direction: column
@@ -22,7 +27,7 @@
         display: flex
         flex-direction: column
         justify-content: space-between
-        padding-left: 200px
+        padding-left: 150px
         box-sizing: border-box
 
     &__col
@@ -40,11 +45,29 @@
         span:last-child
             margin-top: 0.3rem
 
+    &__media
+        position: relative
+        left: -60px
+        display: flex
+        gap: 34px
+
+    &__media  img
+        transition: transform .3s
+
+    &__media  img:hover
+        cursor: pointer
+        transform: scale(1.1)
+
     &__right
         flex: 1 0 60%
 
     #IfRame
         width: 90%
+
+    &__background
+        position: absolute
+        top: 66px
+        left: 0
 
     @media screen and (max-width: 1233px)
         &__left
@@ -53,6 +76,11 @@
     +mixins.respond('lg')
         &__left
             padding-left: 0
+        &__background
+            display: none
+        &__media
+            left: 0
+            gap: 10px
 
     +mixins.respond('sm')
         &__content
