@@ -3,134 +3,135 @@
 @use '../base/_variables'
 
 .footer
-    padding-top: 56px
-    padding-bottom: 31px
+    margin-top: 56px
+    // padding-top: 56px
+    // padding-bottom: 31px
 
-    border-top: 1px solid v.$lightGray
+    // border-top: 1px solid v.$lightGray
 
-    &__content
-        position: relative
-        display: flex
-        flex-direction: column
-        align-items: center
-        gap: 48px
+    // &__content
+    //     position: relative
+    //     display: flex
+    //     flex-direction: column
+    //     align-items: center
+    //     gap: 48px
 
-    &__col--logo
-        display: flex
-        gap: 14px
-        font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem)
+    // &__col--logo
+    //     display: flex
+    //     gap: 14px
+    //     font-size: clamp(1rem, 0.8933rem + 0.5333vw, 1.4rem)
 
-    &__col--subscribe
-        position: relative
-        text-align: center
-        margin-bottom: 50px
+    // &__col--subscribe
+    //     position: relative
+    //     text-align: center
+    //     margin-bottom: 50px
 
-    &__col--subscribe > h4
-        font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem)
-        margin-bottom: 5px
+    // &__col--subscribe > h4
+    //     font-size: clamp(0.9rem, 0.82rem + 0.4vw, 1.2rem)
+    //     margin-bottom: 5px
 
-    &__col--subscribe > input:nth-of-type(1)
-        border: none
-        padding: 10px 10px 10px 40px
-        box-sizing: border-box
-        background: v.$lightGray
-        position: relative
+    // &__col--subscribe > input:nth-of-type(1)
+    //     border: none
+    //     padding: 10px 10px 10px 40px
+    //     box-sizing: border-box
+    //     background: v.$lightGray
+    //     position: relative
 
-    &__col--subscribe::after
-        content: ""
-        position: absolute
-        bottom: 4px
-        left: 13px
-        width: 24px
-        height: 24px
-        background: url("/icons/Mail.svg") no-repeat
+    // &__col--subscribe::after
+    //     content: ""
+    //     position: absolute
+    //     bottom: 4px
+    //     left: 13px
+    //     width: 24px
+    //     height: 24px
+    //     background: url("/icons/Mail.svg") no-repeat
 
-    &__btn
-        padding-top: 10px
-        padding-bottom: 10px
-        border: none
-        border-top-right-radius: 10px
-        border-bottom-right-radius: 10px
+    // &__btn
+    //     padding-top: 10px
+    //     padding-bottom: 10px
+    //     border: none
+    //     border-top-right-radius: 10px
+    //     border-bottom-right-radius: 10px
 
-    &__col--lists
-        display: flex
-        gap: 100px
-        flex-wrap: wrap
-        justify-content: center
+    // &__col--lists
+    //     display: flex
+    //     gap: 100px
+    //     flex-wrap: wrap
+    //     justify-content: center
 
-    &__list > span
-        display: block
-        font-weight: bold
-        font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem)
-        margin-bottom: 12px
-        // justify-content: center
+    // &__list > span
+    //     display: block
+    //     font-weight: bold
+    //     font-size: clamp(1rem, 0.92rem + 0.4vw, 1.3rem)
+    //     margin-bottom: 12px
+    //     // justify-content: center
 
-    &__list li
-        font-size: 0.9rem
+    // &__list li
+    //     font-size: 0.9rem
 
-    &__list li:not(:last-child)
-        margin-bottom: 12px
+    // &__list li:not(:last-child)
+    //     margin-bottom: 12px
 
-    &__col--other
-        position: relative
-        display: flex
-        justify-content: center
+    // &__col--other
+    //     position: relative
+    //     display: flex
+    //     justify-content: center
 
-    &__links
-        display: flex
+    // &__links
+    //     display: flex
 
-    &__links > ul
-        display: flex
-        list-style-type: disc
-        padding-left: 30px
+    // &__links > ul
+    //     display: flex
+    //     list-style-type: disc
+    //     padding-left: 30px
 
-    &__links li
-        padding-right: 30px
+    // &__links li
+    //     padding-right: 30px
 
-    &__links a, &__list a
-        transition: color .3s
+    // &__links a, &__list a
+    //     transition: color .3s
 
-    &__links a:hover, &__list a:hover
-        color: v.$orange
+    // &__links a:hover, &__list a:hover
+    //     color: v.$orange
 
-    &__icons
-        display: flex
-        gap: 18px
-        align-items: center
-        position: absolute
-        bottom: 0
-        right: 0
+    // &__icons
+    //     display: flex
+    //     gap: 18px
+    //     align-items: center
+    //     position: absolute
+    //     bottom: 0
+    //     right: 0
 
-    &__icons > a:hover
-        transform: scale(1.2)
+    // &__icons > a:hover
+    //     transform: scale(1.2)
 
-    +mixins.respond("md")
-        &__col--lists
-            gap: 50px
+    // +mixins.respond("md")
+    //     &__col--lists
+    //         gap: 50px
 
-        &__icons
-            gap: 5px
+    //     &__icons
+    //         gap: 5px
 
-    +mixins.respond("sm")
-        &__btn
-            display: block
-            width: 100%
-            border-radius: 10px
-            margin-top: 5px
+    // +mixins.respond("sm")
+    //     &__btn
+    //         display: block
+    //         width: 100%
+    //         border-radius: 10px
+    //         margin-top: 5px
 
-        &__col--lists
-            gap: 20px
+    //     &__col--lists
+    //         gap: 20px
 
-        &__links
-            flex-direction: column
-            align-items: center
+    //     &__links
+    //         flex-direction: column
+    //         align-items: center
 
-        &__links > ul
-            margin-top: 5px
+    //     &__links > ul
+    //         margin-top: 5px
 
-        &__col--subscribe::after
-            top: 33px
+    //     &__col--subscribe::after
+    //         top: 33px
 
-        &__icons
-            position: static
-            gap: 18px
+    //     &__icons
+    //         position: static
+    //         gap: 18px
