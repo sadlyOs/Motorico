@@ -3,44 +3,30 @@ import * as test from './faq'
 const data = [
     {
         id: 1,
-        img: "/images/products/Image 20.png",
-        title: "Arm Prosthesis",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, officiis, hic eveniet in facilis illo commodi aut architecto velit similique quo, exercitationem aperiam ad porro ipsam iure expedita. Fuga saepe ducimus voluptates nobis consequuntur. Consequuntur? dfdfsfsdfsdfsdfsfsdfdsf"
+        img: "/images/products/Image 20-5.png",
+        title: "Механический протез",
+        desc: "Enhanced mobility with ergonomic support. Ideal for walking and running."
     },
 
     {
         id: 2,
-        img: "/images/products/Image 20-1.png",
-        title: "Leg Prosthesis",
-        desc: "Enhanced mobility with ergonomic support. Ideal for walking and running."
+        img: "/images/products/Image 20-5.png",
+        title: "Косметический протез",
+        desc: "Advanced robotics for precise movements. Seamless integration with neural inputs."
     },
 
     {
         id: 3,
         img: "/images/products/Image 20-2.png",
-        title: "Hand Prosthesis",
+        title: "Бионический протез",
         desc: "Multi-functional grip for versatile tasks. Compact and lightweight design."
     },
 
     {
         id: 4,
-        img: "/images/products/Image 20-3.png",
-        title: "Custom Arm Fit",
-        desc: "Tailored for maximum comfort and performance.Supports various grip styles."
-    },
-
-    {
-        id: 5,
         img: "/images/products/Image 20-4.png",
         title: "Running Prosthesis",
-        desc: "Optimized for speed and agility.Perfect for athletes and active users."
-    },
-
-    {
-        id: 6,
-        img: "/images/products/Image 20-5.png",
-        title: "Robotic Hands",
-        desc: "Advanced robotics for precise movements.Seamless integration with neural inputs"
+        desc: "Perfect for athletes and active users."
     },
 ]
 let srcHtml = ''
