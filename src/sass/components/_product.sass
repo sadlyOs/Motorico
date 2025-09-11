@@ -5,6 +5,9 @@
 .products
     padding: 96px 0
 
+    .soon
+        display: none
+
     &__container
         display: flex
         flex-direction: column
@@ -37,6 +40,7 @@
         gap: 100px
 
     &__item
+        position: relative
         display: flex
         flex-direction: column
         gap: 24px
@@ -51,9 +55,30 @@
         line-height: 2
         color: v.$gray
 
-    &__item > img
+    &__item img
+        position: relative
         max-width: 100%
         height: auto
+
+    &__img
+        position: relative
+
+    &__item.disabled .soon
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: v.$darkblue
+        color: v.$white
+        padding: 10px 30px
+        border-radius: 20px
+
+    &__item.disabled img
+        filter: blur(4px)
+
+    &__item.disabled
+        pointer-events: none
 
     &__btn
         background: none

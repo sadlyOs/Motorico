@@ -5,35 +5,42 @@ const data = [
         id: 1,
         img: "/images/products/Image 20-5.png",
         title: "Механический протез",
-        desc: "Enhanced mobility with ergonomic support. Ideal for walking and running."
+        desc: "Enhanced mobility with ergonomic support. Ideal for walking and running.",
+        disabled: false
     },
 
     {
         id: 2,
         img: "/images/products/Image 20-5.png",
         title: "Косметический протез",
-        desc: "Advanced robotics for precise movements. Seamless integration with neural inputs."
+        desc: "Advanced robotics for precise movements. Seamless integration with neural inputs.",
+        disabled: false
     },
 
     {
         id: 3,
         img: "/images/products/Image 20-2.png",
         title: "Бионический протез",
-        desc: "Multi-functional grip for versatile tasks. Compact and lightweight design."
+        desc: "Multi-functional grip for versatile tasks. Compact and lightweight design.",
+        disabled: false
     },
 
     {
         id: 4,
         img: "/images/products/Image 20-4.png",
         title: "Running Prosthesis",
-        desc: "Perfect for athletes and active users."
+        desc: "Perfect for athletes and active users.",
+        disabled: true
     },
 ]
 let srcHtml = ''
 
 data.forEach(item => {
-    srcHtml += `<div class="products__item">
-                        <img src="${item.img}" alt="${item.title}" />
+    srcHtml += `<div class="products__item${item.disabled ? ' disabled' : ''}">
+                        <div class="products__img">
+                            <img src="${item.img}" alt="${item.title}" />
+                            <p class="soon">Скоро...</p>
+                        </div>
                         <h3>${item.title}</h3>
                         <p>${item.desc.length > 50 ? item.desc.slice(0, 51) + "...": item.desc}</p>
                         <button class="products__btn second__button" id=${item.id}>Learn More</button>

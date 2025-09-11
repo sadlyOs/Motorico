@@ -11,6 +11,7 @@ export default defineConfig({
         products: resolve(__dirname, './src/html/products.html'),
         faq: resolve(__dirname, './src/html/FAQ.html'),
         request: resolve(__dirname, './src/html/request.html'),
+        about: resolve(__dirname, './src/html/about.html')
       }
     }
   }
