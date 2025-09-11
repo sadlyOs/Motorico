@@ -6,7 +6,8 @@ const burger = document.getElementById("burger")
 burger.addEventListener("click", (e) => {
     const phoneMenu = document.getElementById("phoneMenu")
     toggle = !toggle
-    document.body.style.overflow = toggle ? "hidden" : ""
+    burger.style.position = toggle ? "fixed" : "relative"
+    burger.style.right = toggle ? "15px" : "0"
     burger.classList.toggle('white')
     phoneMenu.classList.toggle('hide')
 })
