@@ -503,9 +503,9 @@
   width: 100%;
   text-align: center;
   padding: 7px 0px;
-  border: 2px solid #FF5733;
-  color: #FF5733;
-  border-radius: 10px;
+  border: 2px solid #405BE8;
+  color: #405BE8;
+  border-radius: 5px;
   transition: all 0.3s;
 }
 
@@ -916,6 +916,7 @@
     flex-direction: column;
     text-align: center;
     gap: 0;
+    border-radius: 30px;
   }
   .section-info__background {
     display: none;
@@ -929,7 +930,158 @@
   }
   .section-info__img {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 0;
+  }
+}
+
+.section-persons {
+  margin-top: 100px;
+}
+.section-persons__content {
+  padding: 0 50px;
+}
+.section-persons__top {
+  text-align: center;
+  font-size: clamp(1.1rem, 0.8123rem + 1.4387vw, 2.188rem);
+  margin-bottom: 100px;
+}
+.section-persons__top span {
+  display: block;
+  font-size: clamp(1rem, 0.7355rem + 1.3223vw, 2rem);
+  color: #22257E;
+}
+.section-persons__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.section-persons__card {
+  display: flex;
+  background: #F0F1F5;
+  border-radius: 20px;
+  padding: 15px;
+  gap: 20px;
+}
+.section-persons__card-right {
+  flex: 2 0 200px;
+  font-family: "Inter", sans-serif;
+  padding: 40px 0 40px 20px;
+}
+.section-persons__card-col:first-child {
+  margin-bottom: 50px;
+}
+.section-persons__card-col:last-child {
+  flex: 1 0 auto;
+}
+.section-persons__card-title {
+  font-size: clamp(1.5rem, 1.3678rem + 0.6612vw, 2rem);
+}
+.section-persons__card-subtitle {
+  font-size: 0.8rem;
+  margin: 10px 0;
+  background: #EBEDF8;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #405BE8;
+  font-weight: 500;
+}
+.section-persons__card-quote {
+  margin-bottom: 20px;
+  height: 4vh;
+  line-height: 1.6;
+}
+.section-persons__card-text {
+  font-size: clamp(0.9rem, 0.8736rem + 0.1322vw, 1rem);
+  line-height: 1.6;
+}
+.section-persons__card-left {
+  flex: 1 0 150px;
+}
+.section-persons__card-img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 992px) and (hover: none) {
+  .section-persons__content {
+    padding: 0 15px;
+  }
+  .section-persons__cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .section-persons {
+    margin-top: 0;
+  }
+  .section-persons__card-right {
+    padding: 20px 15px 20px 15px;
+  }
+  .section-persons__card-col:first-child {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) and (hover: none) {
+  .section-persons__top {
+    margin-bottom: 50px;
+  }
+  .section-persons__card {
+    flex-direction: column;
+    padding: 0;
+  }
+  .section-persons__card-img {
+    border-radius: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+}
+
+.section-partners {
+  margin-top: 100px;
+}
+.section-partners__container {
+  padding: 0 72px;
+}
+.section-partners__top {
+  margin-bottom: 80px;
+  font-size: clamp(1.5rem, 1.318rem + 0.9098vw, 2.188rem);
+  font-family: "Inter", sans-serif;
+}
+.section-partners__bottom {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+.section-partners__col {
+  display: flex;
+  flex-direction: column;
+}
+.section-partners__bottom img {
+  margin-bottom: 40px;
+  height: 20vh;
+}
+@media screen and (max-width: 1119px) {
+  .section-partners__bottom img {
+    height: 15vh;
+  }
+}
+@media (max-width: 992px) and (hover: none) {
+  .section-partners__bottom img {
+    height: 10vh;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .section-partners__container {
+    padding: 0 15px;
+  }
+  .section-partners__top {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1264,6 +1416,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 40px;
+}
+.products__top {
+  border: 4px solid #315299;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.products__top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .products__title {
   text-align: center;
@@ -1276,7 +1441,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 24px;
+  gap: 100px;
 }
 .products__item {
   display: flex;
@@ -1397,6 +1562,9 @@
 @media (max-width: 576px) and (hover: none) {
   .products {
     padding: 40px 0;
+  }
+  .products__list {
+    gap: 40px;
   }
   .products__left img {
     width: 100%;

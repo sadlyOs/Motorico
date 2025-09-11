@@ -1,0 +1,105 @@
+@use "../../base/_mixins" as mixins
+@use "../../base/_variables" as var
+@use "../../base/_color" as v
+
+.section-persons
+
+    margin-top: 100px
+
+    &__content
+        padding: 0 50px
+
+    &__top
+        text-align: center
+        font-size: clamp(1.1rem, 0.8123rem + 1.4387vw, 2.188rem)
+        margin-bottom: 100px
+
+        span
+            display: block
+            font-size: clamp(1rem, 0.7355rem + 1.3223vw, 2rem)
+            color: v.$violet
+
+    &__cards
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 50px
+
+    &__card
+        display: flex
+        background: v.$lightGray
+        border-radius: 20px
+        padding: 15px
+        gap: 20px
+
+    &__card-right
+        flex: 2 0 200px
+        font-family: var.$font-inter
+        padding: 40px 0 40px 20px
+
+    &__card-col:first-child
+        margin-bottom: 50px
+
+    &__card-col:last-child
+        flex: 1 0 auto
+
+    &__card-title
+        font-size: clamp(1.5rem, 1.3678rem + 0.6612vw, 2rem)
+
+    &__card-subtitle
+        font-size: 0.8rem
+        margin: 10px 0
+        background: v.$bgBlue
+        width: fit-content
+        padding: 5px 10px
+        border-radius: 20px
+        color: v.$lightBlue
+        font-weight: 500
+
+    &__card-quote
+        margin-bottom: 20px
+        height: 4vh
+        line-height: 1.6
+
+    &__card-text
+        font-size: clamp(0.9rem, 0.8736rem + 0.1322vw, 1rem)
+        line-height: 1.6
+    &__card-left
+        flex: 1 0 150px
+
+    &__card-img
+        border-radius: 20px
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    +mixins.respond("lg")
+        &__content
+            padding: 0 15px
+
+        &__cards
+            grid-template-columns: 1fr
+
+    +mixins.respond("md")
+
+        &
+            margin-top: 0
+
+        &__card-right
+            padding: 20px 15px 20px 15px
+
+        &__card-col:first-child
+            margin-bottom: 20px
+
+    +mixins.respond("sm")
+        &__top
+            margin-bottom: 50px
+
+        &__card
+            flex-direction: column
+            padding: 0
+
+        &__card-img
+            border-radius: 0
+            border-top-left-radius: 30px
+            border-top-right-radius: 30px

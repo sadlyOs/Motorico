@@ -1,0 +1,46 @@
+@use "../../base/_mixins" as mixins
+@use "../../base/_variables" as var
+@use "../../base/_color" as v
+
+.section-partners
+    margin-top: 100px
+
+    &__container
+        padding: 0 72px
+
+    &__top
+        margin-bottom: 80px
+        font-size: clamp(1.5rem, 1.318rem + 0.9098vw, 2.188rem)
+        font-family: var.$font-inter
+
+    &__bottom
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 30px
+
+    &__col
+        display: flex
+        flex-direction: column
+
+    &__bottom img
+        // margin-right: 60px
+        margin-bottom: 40px
+        height: 20vh
+
+    @media screen and ( max-width: 1119px )
+        &__bottom img
+            height: 15vh
+
+    +mixins.respond("lg")
+        &__bottom img
+            height: 10vh
+
+    +mixins.respond("md")
+        &__container
+            padding: 0 15px
+
+        &__top
+            margin-top: 30px
+            margin-bottom: 30px
