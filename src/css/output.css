@@ -871,7 +871,7 @@
   padding: 103px 0;
 }
 .section-info__container {
-  padding: 0 35px;
+  padding: 0 130px;
 }
 .section-info__content {
   position: relative;
@@ -902,6 +902,11 @@
   position: absolute;
   top: 70px;
   left: -30px;
+}
+@media (min-resolution: 120dpi) {
+  .section-info__container {
+    padding: 0 35px;
+  }
 }
 @media (max-width: 992px) and (hover: none) {
   .section-info__container {

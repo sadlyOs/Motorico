@@ -6,7 +6,7 @@
     padding: 103px 0
 
     &__container
-        padding: 0 35px
+        padding: 0 130px
 
     &__content
         position: relative
@@ -37,6 +37,10 @@
         position: absolute
         top: 70px
         left: -30px
+
+    @media (min-resolution: 120dpi)
+        &__container
+            padding: 0 35px
 
     +mixins.respond("lg")
         &__container
