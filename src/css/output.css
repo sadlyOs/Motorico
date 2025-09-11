@@ -1448,7 +1448,7 @@
 }
 .products__top {
   border: 4px solid #315299;
-  border-radius: 50px;
+  border-radius: 100px;
   overflow: hidden;
   margin-bottom: 40px;
 }
@@ -1489,7 +1489,7 @@
 }
 .products__item img {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .products__img {
