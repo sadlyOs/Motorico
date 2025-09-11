@@ -867,6 +867,67 @@
   }
 }
 
+.section-info {
+  padding: 103px 0;
+}
+.section-info__container {
+  padding: 0 35px;
+}
+.section-info__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  background: #F0F1F5;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.section-info__left {
+  padding-left: 114px;
+}
+.section-info__left > h2 {
+  font-size: clamp(1.5rem, 1.1033rem + 1.9835vw, 3rem);
+  margin-bottom: 64px;
+}
+.section-info__left > p {
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(0.9rem, 0.8405rem + 0.2975vw, 1.125rem);
+  line-height: 1.8;
+}
+.section-info__img {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.section-info__background {
+  position: absolute;
+  top: 70px;
+  left: -30px;
+}
+@media (max-width: 992px) and (hover: none) {
+  .section-info__container {
+    padding: 0 15px;
+  }
+  .section-info__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  .section-info__background {
+    display: none;
+  }
+  .section-info__left {
+    padding: 50px 15px;
+    order: 1;
+  }
+  .section-info__right {
+    width: 100%;
+  }
+  .section-info__img {
+    width: 100%;
+    border-radius: 50px;
+  }
+}
+
 .form {
   background: #F0F1F5;
   margin-top: 96px;
@@ -1051,6 +1112,144 @@
 
 .footer {
   margin-top: 56px;
+  padding: 38px 0;
+  background: #F0F1F5;
+}
+.footer__top {
+  padding: 0 30px;
+  display: flex;
+  border-bottom: 4px solid #9095A0;
+}
+.footer__card-container {
+  position: relative;
+  top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+}
+.footer__card {
+  padding: 39px 5px 39px 20px;
+  border: 1px solid #F5F5F5;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.footer__left {
+  flex: 1 0 40%;
+  padding-right: 100px;
+  box-sizing: border-box;
+}
+.footer__right {
+  flex: 1 0 60%;
+  padding: 40px 0 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__card-logo img {
+  height: 4vh;
+}
+.footer__card-logo > a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(1.5rem, 1.1033rem + 1.9835vw, 3rem);
+  margin-bottom: 47px;
+}
+.footer__card-info {
+  font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem);
+  margin-bottom: 67px;
+}
+.footer__card-info span {
+  display: block;
+}
+.footer__card-desc {
+  font-size: clamp(1rem, 0.8511rem + 0.7445vw, 1.563rem);
+  color: #9095A0;
+}
+.footer__cols:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__col > h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(1rem, 0.8942rem + 0.5289vw, 1.4rem);
+  color: #1A73E8;
+  margin-bottom: 19px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-family: "Inter", sans-serif;
+}
+.footer__logo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__bottom {
+  display: flex;
+  margin-top: 40px;
+}
+.footer__bottom-col {
+  flex: 1 0 auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.footer__bottom-col ul {
+  display: flex;
+  list-style-type: disc;
+  gap: 30px;
+}
+@media (max-width: 992px) and (hover: none) {
+  .footer__cols {
+    padding-right: 0;
+    justify-content: start;
+    gap: 10px;
+  }
+  .footer__left {
+    padding: 0;
+  }
+  .footer__right {
+    gap: 50px;
+  }
+  .footer__top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__list {
+    font-size: 0.9rem;
+  }
+  .footer__card-container {
+    position: static;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .footer__cols:first-child {
+    justify-content: space-between;
+  }
+  .footer__bottom-col:first-child {
+    display: none;
+  }
+  .footer__bottom-col {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .footer__item {
+    font-size: 0.7rem;
+  }
+  .footer__logo {
+    width: 100%;
+    gap: 10px;
+  }
+  .footer__logo img {
+    height: 5.5vh;
+  }
 }
 
 .products {

@@ -1,9 +1,153 @@
 @use '../base/_color' as v
+@use '../base/_variables' as var
 @use '../base/_mixins' as mixins
-@use '../base/_variables'
 
 .footer
     margin-top: 56px
+    padding: 38px 0
+    background: v.$lightGray
+
+    &__top
+        padding: 0 30px
+        display: flex
+        border-bottom: 4px solid v.$gray
+
+    &__card-container
+        position: relative
+        top: 20px
+        padding: 15px
+        background: white
+        border-radius: 10px
+
+    &__card
+        padding: 39px 5px 39px 20px
+        border: 1px solid #F5F5F5
+        border-radius: 10px
+        box-sizing: border-box
+
+    &__left
+        flex: 1 0 40%
+        padding-right: 100px
+        box-sizing: border-box
+    &__right
+        flex: 1 0 60%
+        padding: 40px 0 40px 0
+        box-sizing: border-box
+
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__card-logo img
+        height: 4vh
+
+    &__card-logo > a
+        width: fit-content
+        display: flex
+        align-items: center
+        font-family: var.$font-archivo
+        font-size: clamp(1.5rem, 1.1033rem + 1.9835vw, 3rem)
+        margin-bottom: 47px
+
+    &__card-info
+        font-size: clamp(0.9rem, 0.8207rem + 0.3967vw, 1.2rem)
+        margin-bottom: 67px
+
+    &__card-info span
+        display: block
+
+    &__card-desc
+        font-size: clamp(1rem, 0.8511rem + 0.7445vw, 1.563rem)
+        color: v.$gray
+
+    &__cols:first-child
+        display: flex
+        justify-content: space-between
+        // flex-wrap: wrap
+
+    &__col > h3
+        font-family: var.$font-archivo
+        font-size: clamp(1rem, 0.8942rem + 0.5289vw, 1.4rem)
+        color: v.$blue
+        margin-bottom: 19px
+
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 9px
+        font-family: var.$font-inter
+
+    &__logo
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__bottom
+        display: flex
+        margin-top: 40px
+
+    &__bottom-col
+        flex: 1 0 auto
+        display: flex
+        gap: 50px
+        justify-content: center
+
+    &__bottom-col ul
+        display: flex
+        list-style-type: disc
+        gap: 30px
+
+    +mixins.respond("lg")
+        &__cols
+            padding-right: 0
+            justify-content: start
+            gap: 10px
+
+        &__left
+            padding: 0
+
+        &__right
+            gap: 50px
+
+        &__top
+            flex-direction: column
+            gap: 10px
+            // padding: 0
+
+        // &__col > h3
+        //     font-size: 1.2rem
+
+        &__list
+            font-size: 0.9rem
+
+        &__card-container
+            position: static
+
+    +mixins.respond("md")
+
+        &__cols:first-child
+            justify-content: space-between
+
+        &__bottom-col:first-child
+            display: none
+
+        &__bottom-col
+            flex-direction: column
+            gap: 10px
+            align-items: center
+
+        &__item
+            font-size: 0.7rem
+
+        &__logo
+            width: 100%
+            gap: 10px
+            // justify-content: start
+
+        &__logo img
+            height: 5.5vh
+
     // padding-top: 56px
     // padding-bottom: 31px
 
