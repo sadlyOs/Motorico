@@ -1,4 +1,6 @@
-import * as test from './faq'
+import * as test from './faq.js'
+import * as header from './header.js'
+import * as foote from './footer.js'
 
 let toggle = false
 const burger = document.getElementById("burger")
